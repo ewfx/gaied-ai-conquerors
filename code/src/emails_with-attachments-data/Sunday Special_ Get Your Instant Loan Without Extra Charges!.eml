@@ -1,0 +1,262 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:210c:b0:9b:b4c0:dd5a with SMTP id w12csp382536rbw;
+        Sat, 8 Mar 2025 22:04:17 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHajoq9j4eLec5YDhfwpnsf7MSMsfdBNInvytPM7jcmhMPclfvaCXQLemEWc2xMHhqaAhQG
+X-Received: by 2002:a05:6a21:3941:b0:1f0:e42e:fb1d with SMTP id adf61e73a8af0-1f544c7fc7fmr19850530637.36.1741500257253;
+        Sat, 08 Mar 2025 22:04:17 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741500257; cv=none;
+        d=google.com; s=arc-20240605;
+        b=eP6/p/jLydg4vs4YSyIELx468utbEGefkCliC5TF/sFCUozZoffXoC9A1KCu4jgp5e
+         XOIv/hLvplugUYFKPz9TPTvraVoRRxgE06FJybC9xxU/H3ifrqup1elwcJ/i102XUMAt
+         ooxVTNGaj/0pqvWG5WDLrQsBvxUYt7OG5vmgTLIgPja4vwy00ZIZFSNC++XLbVcV2zO8
+         3SF0cLzrOwyNswXiO9aWPsiF7OxrJSsk4Lvq1NCjoZsqr07bI1rjC22L++UmrCpfly3p
+         vF46ZcwmrWxasLpCr3qjbifZRHxlxND+INWFPNQyqQtaUQH47tHvvcvtWVERx8nRYxQt
+         +vzg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:reply-to:subject
+         :message-id:mime-version:from:date:content-transfer-encoding
+         :dkim-signature:dkim-signature;
+        bh=Ou5sDfi8VWddIUEBzYDdo+L122acQzBqfI+tN99bV24=;
+        fh=XkFoFqgoX09ZGStpvfMsAvVTAzcEtLyPvLQRoiCKO1E=;
+        b=P9o56utQ4AHonojASWS0cOS37El/YWyXkGlETAq5miOuBi4LxQxc2W9VPH7b1VMtaK
+         KNQIPHi7XBfyfgtFXk9gHtrXqYKCzrnteVrSTjyVmMxEEV1Gh/KN2oywkJGkBxvKfeQI
+         aPjpn1r8+faSjyK0jqPzCHEeiejO7K/grH3GKxg+76yyMoFY5M4pwevLrNz86FdWhRS3
+         3UeASdREK9LWkGU15nNy45TIc9hhs+xHdIc6BVJs6rw6YLYWQPN/PdM+P76kEtmXpyGW
+         8Ht1M6Il4a23ub4bmaF49TUJPX1Bxea1dsPzDUxmyY0q74KjLMXMpi8H16uH9joYHTSt
+         B2Wg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@products.piramalfinance.com header.s=msg header.b=F20o4Vt3;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=P89IQdcI;
+       spf=pass (google.com: domain of bounces+27962744-447d-rbchalisem=gmail.com@msg.products.piramalfinance.com designates 159.183.214.12 as permitted sender) smtp.mailfrom="bounces+27962744-447d-rbchalisem=gmail.com@msg.products.piramalfinance.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=piramalfinance.com
+Return-Path: <bounces+27962744-447d-rbchalisem=gmail.com@msg.products.piramalfinance.com>
+Received: from o1013.offers.piramalfinance.com (o1013.offers.piramalfinance.com. [159.183.214.12])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-af28108234bsi10954839a12.27.2025.03.08.22.04.15
+        for <rbchalisem@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 08 Mar 2025 22:04:17 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+27962744-447d-rbchalisem=gmail.com@msg.products.piramalfinance.com designates 159.183.214.12 as permitted sender) client-ip=159.183.214.12;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@products.piramalfinance.com header.s=msg header.b=F20o4Vt3;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=P89IQdcI;
+       spf=pass (google.com: domain of bounces+27962744-447d-rbchalisem=gmail.com@msg.products.piramalfinance.com designates 159.183.214.12 as permitted sender) smtp.mailfrom="bounces+27962744-447d-rbchalisem=gmail.com@msg.products.piramalfinance.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=piramalfinance.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=products.piramalfinance.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:list-unsubscribe:list-unsubscribe-post:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=msg; bh=Ou5sDfi8VWddIUEBzYDdo+L122acQzBqfI+tN99bV24=;
+	b=F20o4Vt3fqBMzR6m3qiB4VUXj6ooOPmcqjxlxs4WnD3xlCDahDfMY2J8WQeKREBO1M9S
+	EoK6knuye8jrxnU/tC3o/usHZNudL4/6JGa2OWrfEIeG04Q+bbz3vUg020IsDCwFp4DABI
+	xFuXhpAqX3WmjoquUu2a7J4zifjeERv1IDFRkbuUPG3/B5V7Lk++DooH74t16+yv+qnBB1
+	4uW0YAgjS9xCXvueV1+5mgnXVTkvHii1nyvvHBGggGLvXg+UfQbCTTtRoI4MJvqYBgSks3
+	SRkKgLDIHED+mg6Q+qYlbqB/uxFpvpSpGz3Pi0FSVAfCGasbd+rq1brLBOwUejfQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:list-unsubscribe:list-unsubscribe-post:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=Ou5sDfi8VWddIUEBzYDdo+L122acQzBqfI+tN99bV24=;
+	b=P89IQdcIO5fL+yxLW1IgpjbJLUAloZN1AErN9RTV5Zr5VwswmmyV8iohmNW8YtW3QM5z
+	SRknLq0FO8EcBSZ1l28cNWq/SsFJf0O0c3yFH7gcUFtCInBnGjRXSBn1SsGs1QfbfWa+iO
+	0fpM8TMZaQASxK0ASyU8DUYaEToKeWKnE=
+Received: by recvd-74889bb77c-bfnrx with SMTP id recvd-74889bb77c-bfnrx-1-67CD2EC0-24
+	2025-03-09 06:01:36.902848065 +0000 UTC m=+9880593.968568822
+Received: from Mjc5NjI3NDQ (unknown)
+	by geopod-ismtpd-12 (SG) with HTTP
+	id Zt36qpiARK6s-4BxIT8w4g
+	Sun, 09 Mar 2025 06:01:36.807 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Date: Sun, 09 Mar 2025 06:01:33 +0000 (UTC)
+From: Piramal Finance <products@products.piramalfinance.com>
+Mime-Version: 1.0
+Message-ID: <Zt36qpiARK6s-4BxIT8w4g@geopod-ismtpd-12>
+Subject: Sunday Special: Get Your Instant Loan Without Extra Charges!
+Reply-To: noreply@piramalfinance.com
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fu27962744=2Ect=2Esendgrid=2Enet=2Flu=2Funsubscribe=3Foc=3Du001=2E8Rhd?=
+ =?us-ascii?Q?uyCGY8FY19m1jvZDJP-0EjKXenWQ5On3oFuI9aP?=
+ =?us-ascii?Q?6FQbESrd=5FhVZUv=5FjT=5FOa9bnyaDSN1ekFOGdYmJq?=
+ =?us-ascii?Q?4RL4YNsdS=5FoEZ9PUzOd9McaSnAYMERvfj0cfto5?=
+ =?us-ascii?Q?xxZNgGYMygJbLXm7covWIAgCdHkB-EzEyiNz4Ju?=
+ =?us-ascii?Q?ed1Hfgl5PnyZvH4raet0hx=5FWH3zt6=5Fa1U61r13l?=
+ =?us-ascii?Q?clJmidBphPN1DHg=3E=2C=3Cmailto=3Aunsubscribe=40ms?=
+ =?us-ascii?Q?g=2Eproducts=2Epiramalfinance=2Ecom=3Fsubject=3Dh?=
+ =?us-ascii?Q?ttp=3A=2F=2Flinksg=2Epiramalfinance=2Ecom=2Fss=2Fsu=2Fu?=
+ =?us-ascii?Q?001=2E4MZlt=5FCDfqGJWTCB0TDJ5Q=2F4en=2F8pE7lqdA?=
+ =?us-ascii?Q?RA25OMy3UEFP4g=2Fum=2Fh001=2EOZNA8lcoF62wlU3o?=
+ =?us-ascii?Q?evlyPv=5FfdTYJCI4SRi2kIGYMgHc=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-campaignid: 67cbaa4277755e320915a9e9
+X-Feedback-ID: 27962744:SG
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EG4mZFNYlmwxfahqJLZBbdRAAQKDlQJx3tEvoXBFc5dYjykUaBhllkhl2Z?=
+ =?us-ascii?Q?JGky1clts4H8fqaf6y+Vax6tW9qWMifk7U3tAXR?=
+ =?us-ascii?Q?8g+NvYNZDNr7TFhrJCnyF7lzN7XEFhxAmUuf8de?=
+ =?us-ascii?Q?su+dDb=2FzoXutzDQsQeJcMvpDUQJG+BHzDucn29J?=
+ =?us-ascii?Q?f7J5hlr3+R6IlgJ9Ypyj9AZ39B3FqRBFs8RZ38y?=
+ =?us-ascii?Q?pIgCanzIjW9YmnGiIm+VxSuRujkkxopZjrPBVWz?=
+ =?us-ascii?Q?xc6FZtzqy9nzQv0X6ONsrWfh2A=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprBkkoo3Jz4rspq=2Fx?=
+ =?us-ascii?Q?5d35vN=2FMBXs59fxxBXx33mX8yEnbSS5Cf=2FQzkLf?=
+ =?us-ascii?Q?dT1RPdgwtq5vnVMl+9BlfJBgKt3GbSUwq425k4S?=
+ =?us-ascii?Q?g=2FY7uIhQfW20UZo7xxBtRePkY2KUoeX5E6ro9Qb?=
+ =?us-ascii?Q?O2pwLRDwReS1dyNsPs0U40oiMWKSnpEhuSIjri3?=
+ =?us-ascii?Q?b4shjZLcilKn7r06A1vgguQ05J1cuVbCFfk9mOW?=
+ =?us-ascii?Q?pPDU3fgtQv0lUx6bXZO2yqMasXCC5OQcA1VjJzl?=
+ =?us-ascii?Q?GXQzFejk118FvYUPGG6OQOkLEFViunHf5UX6weT?=
+ =?us-ascii?Q?FazG3XOFWloUqBX7RDrwkpiwj=2FMTnSnB=2FDQdm7E?=
+ =?us-ascii?Q?=2F=2FWI481DeD5vOG5T+eELy7j60ZkTAxNsqKUyBMe?=
+ =?us-ascii?Q?YKS8JB0eAZwsrp8aoJs=3D?=
+To: rbchalisem@gmail.com
+X-Entity-ID: u001.W65JGE9t7IFwA7D4u+jM3Q==
+
+<!DOCTYPE html>
+
+<html><head><title>Update on Piramal Capital & Housing Finance Ltd. loan ap=
+plication</title><meta charset=3D"utf-8" content=3D"text/html" http-equiv=
+=3D"Content-Type"/><meta content=3D"noindex, nofollow, noarchive" name=3D"r=
+obots"/><meta content=3D"noindex, nofollow, noarchive" name=3D"googlebot"/>=
+</head><body aria-disabled=3D"false" class=3D"fr-no-selection" data-gr-ext-=
+installed=3D"" data-new-gr-c-s-check-loaded=3D"14.1202.0" data-new-gr-c-s-l=
+oaded=3D"14.1202.0"><div style=3D"display:none">Click to check your Special=
+ Loan Offer now!&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#652=
+79; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#=
+847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#=
+8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; =
+&#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#6527=
+9; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#8=
+47;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8=
+199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &=
+#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279=
+; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#84=
+7;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#81=
+99; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#=
+65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279;=
+ &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847=
+;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#819=
+9; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#6=
+5279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; =
+&#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;=
+&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199=
+; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65=
+279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &=
+#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&=
+#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199;=
+ &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#652=
+79; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#=
+847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#=
+8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; =
+&#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#6527=
+9; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#8=
+47;&#8199; &#65279; &#847;&#8199; &#65279; &#847;&#8199; &#65279; &#847;</d=
+iv><p style=3D"text-align:center;"><a href=3D"http://linksg.piramalfinance.=
+com/ss/c/u001.E1xWFhPZBTreg-dInb-Lfpsek6r8IpvSc8noAZ8ZxL7W-dRRzelxao5-uBjmb=
+KCINCi2rLXWg_Z1yxYSZfmsYZsuWA6HQAjZArpqVuYqC1DmesHKxM2azwjLmGzP9fFI5c6z_vAR=
+XdDmStyIf_jFXRv8u1VT0sY6EDUI_2kqiGhz9A8Ms7IeSc6uOOnilm9oopsfZotgpHdHV63kNbR=
+AS7N6mV4O5Q9nbpwCVHVNe_EJSsLZ2Vaw-MuIwBsy3QYmo5T3gW0L0oS_bTW3EU8XXe-ld59PeE=
+0Kgw_7dk6l32sGSn5ViKP97F3B0q-ydQWc2UX79UivnulaEmqYuOLoZzv9_GT8SP2yAuWyG0sRz=
+xrctwX2Di6QGtLwKwfMUzRDsqgUHU0aKX8tfDdUndERN2abcMq_dsCKC3C_OT-CzM9ehMW8ovce=
+Cx5Y4C9j39r7x5znFqJNX1Nv0PprUJmpSNRT5ReEMSPRs7NXM2n1EIpB7fhHk0RcMPX80dqCF0I=
+DDmRkW3SGBqBsFc3uDinlRA/4en/8pE7lqdARA25OMy3UEFP4g/h0/h001.oy51glbBM2C4WUN8=
+gXuLFEa7axd0qshzJGVUsAseEVQ" id=3D"moe_internal_email_vib">View in browser<=
+/a></p><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"border-width: 3px 3px 1px 1px; border-style: solid; border-color: rgb(246,=
+ 134, 50) rgb(246, 134, 50) rgb(101, 101, 101) rgb(101, 101, 101);" width=
+=3D"550"><tbody><tr><td><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"margin-left: calc(0%); width: 100%;" width=
+=3D"550"><tbody><tr><td align=3D"right" style=3D"font-family: Calibri; font=
+-size: 12px;padding:0px;"><a href=3D"http://linksg.piramalfinance.com/ss/c/=
+u001.E1xWFhPZBTreg-dInb-Lfpsek6r8IpvSc8noAZ8ZxL7W-dRRzelxao5-uBjmbKCIxBidLl=
+8jsn8-mf8ls-0dMlVqtKW5G_WxyP-3_SPNtxrLqf0INpoiRkaaCBMG2MpbJKA_kEfKcRvcsWoYk=
+NWCZM2y2XeFrqrw8FRt3adHUlMihu5ehGfE7sfATPnofhXFrwfCzG5hlVsi3amQTjYJ12yC1PV2=
+1fG_fIUT1QZTXHzexGoLVLElDMXEXB2FW-TSt32NQS1xKioUKrACi5mew1PUo6lQquI33frZw4Q=
+kAB7c50OuGuzvKLjrBJ41tbHOc4GqkLwEOsevkMtQiM_B7Fyz7li1mkZXP7AEqIew_n7FGpRzrY=
+IcZACWx7gN3GfPqHbIkZDEQ2Hip3knNY9YKy2AFSJMc6b1BZkbte2sS-3TZ7pNHBbmNPBiky4u1=
+WuadvsQJqIMLCX0FzdBJYj01zACjyAOwAtvEI0JAv6XfRwKWezNIyNtJDtJPSaAKwWmF9EK6zxY=
+wHgg6ze04BpEio_jeP2r_AH-DdUpcO_tRss1AVy-8cQ-3JygrdhV2s2EB8XEkgR-utd0AP8q3oj=
+qNkPa1mqdTMnwpSoNheKtQMQuVtm-7Yp5zjEwZVFKygPWvTAG0l4V7F2-UT-duq0f283pMW0NkW=
+lMwZnAB4q91jJnZg7Br7hM_p6I7_XVb-yR1zbmGbq2OIObpiHtX-yjzvwEV2EYNuehzp4rC7Ngi=
+S5VRAzdrJHKyRPpK_8Cl17A2bBKHGQVuaORgHyZaXNybGzFmX8C7yYlXG327sUMSVa_VTBy0AQs=
+BC2ysPsn4WK7KqXXyDg674mPxa3TsH4sOyHWsaWwihaFRU_bxwdAXZPUW6elfWjvV7B-vQoftxz=
+7xq4z2CHIOtD1FwUxbbeZKVILmeEvO1Ov7uE4CHoaQK6eM_Frof2zR0w4BOVzbhM7mGemn2fZZ9=
+TJ9Bug39rBhbFCAA5bvTasqGDWFUOIlXTexJ4iQya3wkedQ9Y9pZBo7FKeApO5k02LjUza5MhM8=
+kcMm4ZuIwj3zp57flbZhVY/4en/8pE7lqdARA25OMy3UEFP4g/h1/h001.xFtm2uNcBAUeSO0dk=
+zAJRdg6PzW8MesAMrJ-Z4JWri8" rel=3D"noopener noreferrer" target=3D"_blank"><=
+img data-file_name=3D"piramalfinancemoengage/20241108084110333160QU8OJ2Sund=
+ayjpgpiramalfinancemoengage.jpg" data-status=3D"true" data-url=3D"https://i=
+mage-ap1.moengage.com/piramalfinancemoengage/20241108084110333160QU8OJ2Sund=
+ayjpgcomppiramalfinancemoengage.jpg" src=3D"https://image-ap1.moengage.com/=
+piramalfinancemoengage/20241108084110333160QU8OJ2Sundayjpgcomppiramalfinanc=
+emoengage.jpg" style=3D"width: 550px;"/></a></td></tr><tr><td align=3D"left=
+" colspan=3D"2" style=3D"font-family: Calibri; font-size: 14px;padding-left=
+:10px;padding-right:10px;padding-top:0px;padding-bottom:0px;"><p>Hi <strong=
+>Ramesh,</strong></p><p>As you prepare for the week ahead, <strong>let us h=
+elp with any last-minute financial needs.</strong></p><p>Your <strong>Insta=
+nt Digital Loan</strong>=C2=A0of up to <strong>=E2=82=B9100000 </strong>off=
+ers no foreclosure or repayment fees, so you can start the week with total =
+flexibility. </p><p><strong>Why Apply Today:</strong></p><p>=F0=9F=8C=85 Fa=
+st approvals for Sunday prep</p><p>=F0=9F=8C=9F Zero hidden fees or charges=
+</p><p>=F0=9F=92=B0 Flexible terms that fit your plans</p><p>Get set up for=
+ success this Sunday=E2=80=94<strong>apply in minutes!</strong></p><p>Hurry=
+! <strong>Check your EMI now!</strong> =F0=9F=91=87=F0=9F=8F=BB </p><p styl=
+e=3D"text-align: center;"><a href=3D"http://linksg.piramalfinance.com/ss/c/=
+u001.E1xWFhPZBTreg-dInb-Lfpsek6r8IpvSc8noAZ8ZxL7W-dRRzelxao5-uBjmbKCIN1twWQ=
+biTyIg_6MDR-e8lDpvDor_Euita3Xi4P96oBd4xxIpgTxDXNhH-h_hxEUjpwGFVkd8Q3vzQddcP=
+c0X0OMLB1pI-4VRuIc1dzh6oSAJNXHQ4gjUsZ2OnhGpyxulp4llBoXJFLoQbZURa8IFXZLCo2hO=
+22l84SOl7iF2tB3hnuHqP7Y-tuh5PYWMmVKATa8rej1tyBIPcpBeFNAg0VAq_tU7-DLVx7_dn90=
+O41wCPKyU1d_aP9HmMupBT5WouAwUlj6wGngo1tkL_3QUp1KBanhZm0Wk1OsBD7toq0OM_5LqwF=
+alOin9yeBiUtStPQLo8i1ncKhdPF0ITkwxepx42WXrky3tKQVlVwZAO6-HoanbRC_Lj-7RDrrPL=
+uQZVVmRrlo9OgY0sXkKB5HZBhb8OyIpIXQIyrs57huW5iQV_keicecDdBVXj2Q7ZL2MlJ5RxaMa=
+nWS-pMo7M3k1R8Jvi2NSZxz_LHLTeUUEaUU6-FjkT_cx81GI7piEQ-KebmvGn7q1SQtjA623oAp=
+ZllSD2-diVZ_BSdu6r_CHrjfClUIm2P8ouOJ6d5lrijEXAafG5B0L13FcGbiHyL7GLiMjwbh_gF=
+d3elwUKN2KS7YbZ3h6CTbqwHSVr8fCZZpvaRZn_my3GY1G1cppqyW_n9MOV750b2HllStfALkIb=
+fNME6thDBrePPe1rc5RApbSO5ISTQHGuKOQ9rDbjAxGuedWR90LoR6Butq2IUedURqvPRg-SmEj=
+M32zLmmmNC37p5FtmOa_OsoZStOq7uAv83zk0kO9g66bNQ7aFV8rQ9xcpQHOZS_MMN7S6gEgVtY=
+cvKgof4kYF_pZ-aj-3cBswi7Qz8L75nFOiwrl8aC1ZCX5WWVGVXuOiaItbgQhHsXOpuib8beACO=
+Zg8S43eO_-KF-Rk5l7TdP5Jc0LiaYGops0zGfBTo0Uv8p0ukxQP1dWF5VWi3743SDPeQ8jdlGbP=
+spoq6PgTvapK5wHOlh3Wkk/4en/8pE7lqdARA25OMy3UEFP4g/h2/h001.3he8pZ0vN92oZCVPX=
+Hlh9u4AmnA1UrP9-dxm5YCdLSA" rel=3D"noopener noreferrer" target=3D"_blank"><=
+img data-file_name=3D"piramalfinancemoengage/20230825140411715411TGM1CGOran=
+gebuttonpngpiramalfinancemoengage.png" data-status=3D"true" data-url=3D"htt=
+ps://image-ap1.moengage.com/piramalfinancemoengage/20230825140411715411TGM1=
+CGOrangebuttonpngpiramalfinancemoengage.png" src=3D"https://image-ap1.moeng=
+age.com/piramalfinancemoengage/20230825140411715411TGM1CGOrangebuttonpngpir=
+amalfinancemoengage.png" style=3D"width: 182px;"/></a></p></td></tr><tr><td=
+ colspan=3D"2" style=3D"font-family: Calibri; font-size: 14px;padding-top:0=
+px;padding-left:10px;padding-bottom:20px;"><strong>For </strong><strong>hel=
+p</strong>,<strong> call us at=C2=A0</strong>=F0=9F=91=89=F0=9F=8F=BB 22693=
+28212 <br><br>Warm Regards,<br><span style=3D"font-family: Calibri,sans-ser=
+if;">Piramal Finance</span></td></tr></tbody></table></td></tr></tbody></ta=
+ble><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"550"><tbody><tr><td align=3D"left" style=3D"font-family: Calibri=
+; font-size: 11px;padding-left:5px;padding-top:5px;padding-bottom:5px;"><sp=
+an style=3D"font-family: Calibri, sans-serif; font-size: 8px;"><font size=
+=3D"3">*Terms & conditions apply.</font><p><font size=3D"3">Piramal Finance=
+</font></p></span><p><font size=3D"3"><span style=3D"font-size: 14px;"><spa=
+n style=3D"font-family: 'Calibri', sans-serif;">CIN: U65910MH1984PLC032639 =
+| Registered Address: 601, 6th Floor, Amiti Building, Agastya Corporate Par=
+k, Kamani Junction, Opp. Fire Station, LBS Marg, Kurla (W) Mumbai MH 400070=
+ | <a href=3D"mailto:nodal.officer@piramal.com" target=3D"_blank"></a>For a=
+ny query or clarification, call us at 1800 2666 444 or write to us at </spa=
+n></span><a href=3D"mailto:customercare@piramal.com" target=3D"_blank"><spa=
+n style=3D"font-family: Calibri, sans-serif; font-size: 14px;">customercare=
+@piramal.com</span></a></font></p></td></tr></tbody></table>If you'd like t=
+o unsubscribe and stop receiving these emails <a href=3D"http://linksg.pira=
+malfinance.com/ss/su/u001.4MZlt_CDfqGJWTCB0TDJ5Q/4en/8pE7lqdARA25OMy3UEFP4g=
+/uh/h001.uAs_Zmil7z12ua4VeIAq_R43ocSMS1egS0nHZz6NQN0"> click here </a>.<img=
+ src=3D"http://linksg.piramalfinance.com/ss/o/u001.4MZlt_CDfqGJWTCB0TDJ5Q/4=
+en/8pE7lqdARA25OMy3UEFP4g/ho.gif" alt=3D"" width=3D"1" height=3D"1" border=
+=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0 !=
+important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0=
+ !important;margin-left:0 !important;padding-top:0 !important;padding-botto=
+m:0 !important;padding-right:0 !important;padding-left:0 !important;"/></bo=
+dy></html><img src=3D"https://moe_3j4b.api-03.moengage.com/v1/emailopen?q=
+=3DCDJAQ7YtqrqjH9iRCf7os_8i5vPh4QCVUPo7DiOJ5k4hrdix.bAos71SmMp0-8MQWS_E7S7Z=
+I3TcnXCKZUtjqKbuvyx5dC5vqDWscNIM2eNeUWpebdTRzFI46kgUQPo7w309grlMWZuzjTnU_3e=
+9zsIpOmgjKNvf96Qamu.Ce3LkCrkKSFiuNy4r3_gAUsihSCK174JEu58OO.Ats1KQ-qK5Drvq_X=
+SsAbSf0OotWmdmaPtp2MhzAsojYv0rcOlgEMLm9DYPausgUXP2pS4TNlGCZwDuxNA-tBoepEu_T=
+qRMEs8ynVdt5g6_Pzy7YkmXJtqdRtOUkQiHHDqn5VDEixthAM38_.eiHkKB" alt=3D"" style=
+=3D"display:none;width:1px;height:1px;" height=3D"1" width=3D"1">

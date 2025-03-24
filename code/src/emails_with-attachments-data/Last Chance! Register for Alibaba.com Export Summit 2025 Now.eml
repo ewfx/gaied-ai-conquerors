@@ -1,0 +1,1013 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:c253:b0:9a:316d:10fc with SMTP id w19csp780922rbd;
+        Fri, 28 Feb 2025 02:37:32 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFKX+j92cn4EoRp7A6Zt2MVg1HkG46Wjz79tsoRIEpelHN7YdbcpjVhC64NsKs1y8KO6+Fy
+X-Received: by 2002:a17:902:f54e:b0:21f:52e:939e with SMTP id d9443c01a7336-22368fc99e5mr47093725ad.28.1740739052251;
+        Fri, 28 Feb 2025 02:37:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1740739052; cv=none;
+        d=google.com; s=arc-20240605;
+        b=cVDFiaWfMQxhDxcsYENMMqa/EnCbXL975yOLofQnAsnGQENUtjGlyF7A4w9Q3uL9C5
+         G3PNM+2SANQFqoWT++Pyt/hGtIjRJuMgSSaQ5ttadFUrBcyFJFiLCZ3/wtKPkRkODC9Z
+         JYCDX29Ms8ZKhY/2dIUklc0Feku5XVSy0bJ7hcW054vZzdnDceJmTUeSq6VTQflYimgR
+         6Z1+NFV3UlDdX92b1uoTIima+Staok9WffPkIVMr0r/SWob9zNfZ3LCUhTkugFSkRSPu
+         Il4qwsdpOKWL8+Nb9DXY5BOtnE5rPXnHmrnvhlXvdYbFP1OBv0znnGGXYJqJjCUSdxHb
+         juww==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:mime-version:subject:to:reply-to:from:date
+         :dkim-signature:list-unsubscribe:list-unsubscribe-post:message-id;
+        bh=Qgp0UIVtv6q4jquQ/XxMek0X4MTsqdAhxPWqNL1CS8Q=;
+        fh=XkFoFqgoX09ZGStpvfMsAvVTAzcEtLyPvLQRoiCKO1E=;
+        b=eI5XQwKqnx/83Hsje+3V0g+i/PiYrhTK99Ec6vETmbkPLzfjL7l6rY3/NQyeHOFITM
+         NX3gnoIGW3oWUPpk8qLRO2TQKgCTju3ZFU3DrP2BXdv1vgpGT+Wy4LCC1ThE2kQ+Mb08
+         MFcuePg4duAqyrGuaiXOJaJcv/a+BeNihGDjNkz/sx4xYGic615b6DbNp9Y8A0AM+YCh
+         nz2LHHqr7reXb0qvJDuuI2PPz7LS7W0zTnrccjO3Jdojs0vhuYydVC79qfmDinj9iqTt
+         Pa+iLdaKA7Bo37+E5ry1qxN3lBPGYb4nFHX6M+D7BtWhLlEN826bM7wUGgceFtEeoz7k
+         knJw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alibaba.com header.s=s1024 header.b="JySV/cuc";
+       spf=pass (google.com: domain of global-seller@email.alibaba.com designates 47.90.197.77 as permitted sender) smtp.mailfrom=global-seller@email.alibaba.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.alibaba.com
+Return-Path: <global-seller@email.alibaba.com>
+Received: from out197-77.us.a.dm.aliyun.com (out197-77.us.a.dm.aliyun.com. [47.90.197.77])
+        by mx.google.com with ESMTPS id d9443c01a7336-223501d667fsi64538855ad.31.2025.02.28.02.37.30
+        for <rbchalisem@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 28 Feb 2025 02:37:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of global-seller@email.alibaba.com designates 47.90.197.77 as permitted sender) client-ip=47.90.197.77;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alibaba.com header.s=s1024 header.b="JySV/cuc";
+       spf=pass (google.com: domain of global-seller@email.alibaba.com designates 47.90.197.77 as permitted sender) smtp.mailfrom=global-seller@email.alibaba.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=email.alibaba.com
+Message-ID: <67c191ec.170a0220.72878.d5c5SMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: 38739840-c5a9-4c88-b34c-290b8eaf072e-0
+X-AliDM-RcptTo: cmJjaGFsaXNlbUBnbWFpbC5jb20=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <http://dm-cn.aliyuncs.com/trace/v1/unsubscribe?lang=en-us&sign=3d6e5ec90f6d7b1fc9507e41484129e5&token=eyJjYW1wYWlnbl90aW1lIjoxNzQwNzM5MDQ1LCJlZG1faWQiOjExLCJlbnZpZCI6IjYwMDAwMDE2NzU3ODE3MzAwNCIsIm1haWxfZnJvbSI6Imdsb2JhbC1zZWxsZXJAZW1haWwuYWxpYmFiYS5jb20iLCJtYWlsX3RvIjoicmJjaGFsaXNlbUBnbWFpbC5jb20iLCJ0YXNraWQiOiIifQ%3D%3D&version=1.0>
+DKIM-Signature:v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=alibaba.com; s=s1024;
+	t=1740739046; h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=Qgp0UIVtv6q4jquQ/XxMek0X4MTsqdAhxPWqNL1CS8Q=;
+	b=JySV/cuch2IFuwAWobob/C3gWWUCNz2qJ2S/Ne92IfWMjF7pXI3DLdWVs3R+xrExDsUMl8GRGst52E9I5tNefoR/NZLGZmYzWjEM3X+Lt80JOnrkeD3iGXV5c62t9PsUP0D+G3K+qn5v4JcxF9lOwWLqzaRKRcp5lZ3btJ2asew=
+Received: from mobile-messages-service033044081154.center.na620(mailfrom:global-seller@email.alibaba.com fp:SMTPD_-VHcDYpezsD cluster:AY35D)
+          by smtp.aliyun-inc.com(127.0.0.1);
+          Fri, 28 Feb 2025 18:37:25 +0800
+X-EnvId: 600000167578173004
+Date: Fri, 28 Feb 2025 02:37:25 -0800 (PST)
+From: "Alibaba.com" <global-seller@email.alibaba.com>
+Reply-To: global-seller@email.alibaba.com
+To: rbchalisem@gmail.com
+Subject: Last Chance! Register for Alibaba.com Export Summit 2025 Now
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1395963_94071040.1740739045656"
+Feedback-ID: email_alias_211015356:rbchalisem@gmail.com:T75004:icbu_edm
+
+------=_Part_1395963_94071040.1740739045656
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+ <head>=20
+  <title></title>=20
+  <!--[if !mso]><!-->=20
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+  <!--<![endif]-->=20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" =
+/>=20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />=20
+  <style type=3D"text/css">
+  #outlook a { padding:0; }
+  body { width:100% !important;min-width:100%;margin:0;padding:0;-webkit-te=
+xt-size-adjust:100%;-ms-text-size-adjust:100%; }
+  table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspac=
+e:0pt; }
+  img { border:0;height:auto;line-height:100%; outline:none;text-decoration=
+:none;-ms-interpolation-mode:bicubic; }
+  p { display:block;margin:0px; }
+  .ReadMsgBody {width: 100%;}
+  .aym_table_wrap{ width:100% !important; }
+  #backgroundTable { margin:0;padding:0;width:100% !important;line-height:1=
+00% !important; }
+  .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.=
+ExternalClass td,.ExternalClass div { line-height:100%; }
+</style>=20
+  <!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<![endif]-->=20
+  <!--[if lte mso 11]>
+<style type=3D"text/css">
+  .rm-outlook-group-fix { width:100% !important; }
+</style>
+<![endif]-->=20
+  <!--[if !mso]><!-->=20
+  <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:300,400,50=
+0,700" rel=3D"stylesheet" type=3D"text/css" />=20
+  <style type=3D"text/css">
+  @import url(https://fonts.googleapis.com/css?family=3DRoboto:300,400,500,=
+700);
+</style>=20
+  <link href=3D"" rel=3D"stylesheet" type=3D"text/css" />=20
+  <style type=3D"text/css">@import url();</style>=20
+  <!--<![endif]-->=20
+  <style>
+ =20
+  .mui-zebra-module {
+    min-height: 0 !important;
+  }
+</style>=20
+  <style type=3D"text/css">
+  @media only screen and (min-width:480px) {
+    .rm-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
+    }
+    .rm-column-per-50 {
+      width: 50% !important;
+      max-width: 50%;
+    }
+    .rm-column-per-33 {
+      width: 33% !important;
+      max-width: 33%;
+    }
+    .rm-column-per-25 {
+      width: 25% !important;
+      max-width: 25%;
+    }
+    .rm-column-per-20 {
+      width: 20% !important;
+      max-width: 20%;
+    }
+    .showPC {
+      display: block !important;
+    }
+  }
+</style>=20
+  <style media=3D"screen and (min-width:480px)">
+  .moz-text-html .rm-column-per-100 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .moz-text-html .rm-column-per-50 {
+    width: 50% !important;
+    max-width: 50%;
+  }
+  .moz-text-html .rm-column-per-33 {
+    width: 33% !important;
+    max-width: 33%;
+  }
+  .moz-text-html .rm-column-per-20 {
+    width: 20% !important;
+    max-width: 20%;
+  }
+  .moz-text-html .showPC {
+    display: block !important;
+  }
+</style>=20
+  <style type=3D"text/css">
+  @media only screen and (max-width:480px) {
+    table.rm-full-width-mobile {
+      width: 100% !important;
+    }
+    td.rm-full-width-mobile {
+      width: auto !important;
+    }
+    .m-padding-4 {
+      padding: 4px !important;
+    }
+    .m-padding-8 {
+      padding: 8px !important;
+    }
+    .m-padding-12 {
+      padding: 12px !important;
+    }
+    .m-padding-16 {
+      padding: 16px !important;
+    }
+    .m-padding-20 {
+      padding: 20px !important;
+    }
+    .m-padding-24 {
+      padding: 24px !important;
+    }
+    .m-padding-top-4 {
+      padding-top: 4px !important;
+    }
+    .m-padding-top-8 {
+      padding-top: 8px !important;
+    }
+    .m-padding-top-12 {
+      padding-top: 12px !important;
+    }
+    .m-padding-top-16 {
+      padding-top: 16px !important;
+    }
+    .m-padding-top-20 {
+      padding-top: 20px !important;
+    }
+    .m-padding-top-24 {
+      padding-top: 24px !important;
+    }
+    .m-padding-bottom-4 {
+      padding-bottom: 4px !important;
+    }
+    .m-padding-bottom-8 {
+      padding-bottom: 8px !important;
+    }
+    .m-padding-bottom-12 {
+      padding-bottom: 12px !important;
+    }
+    .m-padding-bottom-16 {
+      padding-bottom: 16px !important;
+    }
+    .m-padding-bottom-20 {
+      padding-bottom: 20px !important;
+    }
+    .m-padding-bottom-24 {
+      padding-bottom: 24px !important;
+    }
+    .m-padding-left-4 {
+      padding-left: 4px !important;
+    }
+    .m-padding-left-8 {
+      padding-left: 8px !important;
+    }
+    .m-padding-left-12 {
+      padding-left: 12px !important;
+    }
+    .m-padding-left-16 {
+      padding-left: 16px !important;
+    }
+    .m-padding-left-20 {
+      padding-left: 20px !important;
+    }
+    .m-padding-left-24 {
+      padding-left: 24px !important;
+    }
+    .m-padding-right-4 {
+      padding-right: 4px !important;
+    }
+    .m-padding-right-8 {
+      padding-right: 8px !important;
+    }
+    .m-padding-right-12 {
+      padding-right: 12px !important;
+    }
+    .m-padding-right-16 {
+      padding-right: 16px !important;
+    }
+    .m-padding-right-20 {
+      padding-right: 20px !important;
+    }
+    .m-padding-right-24 {
+      padding-right: 24px !important;
+    }
+    .m-margin-4 {
+      margin: 4px !important;
+    }
+    .m-margin-8 {
+      margin: 8px !important;
+    }
+    .m-margin-12 {
+      margin: 12px !important;
+    }
+    .m-margin-16 {
+      margin: 16px !important;
+    }
+    .m-margin-20 {
+      margin: 20px !important;
+    }
+    .m-margin-24 {
+      margin: 24px !important;
+    }
+    .m-margin-top-4 {
+      margin-top: 4px !important;
+    }
+    .m-margin-top-8 {
+      margin-top: 8px !important;
+    }
+    .m-margin-top-12 {
+      margin-top: 12px !important;
+    }
+    .m-margin-top-16 {
+      margin-top: 16px !important;
+    }
+    .m-margin-top-20 {
+      margin-top: 20px !important;
+    }
+    .m-margin-top-24 {
+      margin-top: 24px !important;
+    }
+    .m-margin-bottom-4 {
+      margin-bottom: 4px !important;
+    }
+    .m-margin-bottom-8 {
+      margin-bottom: 8px !important;
+    }
+    .m-margin-bottom-12 {
+      margin-bottom: 12px !important;
+    }
+    .m-margin-bottom-16 {
+      margin-bottom: 16px !important;
+    }
+    .m-margin-bottom-20 {
+      margin-bottom: 20px !important;
+    }
+    .m-margin-bottom-24 {
+      margin-bottom: 24px !important;
+    }
+    .m-margin-left-4 {
+      margin-left: 4px !important;
+    }
+    .m-margin-left-8 {
+      margin-left: 8px !important;
+    }
+    .m-margin-left-12 {
+      margin-left: 12px !important;
+    }
+    .m-margin-left-16 {
+      margin-left: 16px !important;
+    }
+    .m-margin-left-20 {
+      margin-left: 20px !important;
+    }
+    .m-margin-left-24 {
+      margin-left: 24px !important;
+    }
+    .m-margin-right-4 {
+      margin-right: 4px !important;
+    }
+    .m-margin-right-8 {
+      margin-right: 8px !important;
+    }
+    .m-margin-right-12 {
+      margin-right: 12px !important;
+    }
+    .m-margin-right-16 {
+      margin-right: 16px !important;
+    }
+    .m-margin-right-20 {
+      margin-right: 20px !important;
+    }
+    .m-margin-right-24 {
+      margin-right: 24px !important;
+    }
+    .m-font-11 {
+      font-size: 11px !important;
+    }
+    .m-font-13 {
+      font-size: 13px !important;
+    }
+    .m-font-16 {
+      font-size: 16px !important;
+    }
+    .m-font-18 {
+      font-size: 18px !important;
+    }
+    .m-font-20 {
+      font-size: 20px !important;
+    }
+    .m-max-width-none {
+      max-width: none !important;
+    }
+    .m-max-width-min {
+      max-width: 0 !important;
+    }
+    .m-width-auto {
+      width: auto !important;
+    }
+    .m-width-min {
+      width: 0 !important;
+    }
+    .m-width-100 {
+      width: 100% !important;
+    }
+    .m-height-min {
+      height: 0 !important;
+    }
+    .m-height-100 {
+      height: 100% !important;
+    }
+    .m-height-auto {
+      height: auto !important;
+    }
+  }
+</style>=20
+  <script src=3D"https://s.alicdn.com/@g/woodpeckerx/jssdk??wpkReporter.js,=
+plugins/flow.js"></script>=20
+ </head>=20
+ <body style=3D"word-spacing:normal;background-color:#f2f3f7;">=20
+  <p class=3D"showPC" style=3D"font-size:40px;line-height:40px; display: no=
+ne;">=C2=A0</p>=20
+  <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"640p=
+x" style=3D"width:100%;min-width:350px;max-width:640px;background-color:#ff=
+ffff;">
+   <tbody>
+    <tr>
+     <td> <p style=3D"text-align:right;background-color:#f2f3f7;font-size:0=
+px;line-height:0px;color:#f2f3f7;"> </p>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+">=20
+          <table align=3D"center" style=3D"max-width: 640px; min-width: 375=
+px; width: 100%; background-color: white; border-collapse: collapse; border=
+-spacing: 0px;">
+           <tbody>
+            <tr>
+             <td style=3D"padding: 20px 0px 20px 6.4%;"><img width=3D"177" =
+height=3D"24" src=3D"https://gw.alicdn.com/imgextra/i4/O1CN01NW0pSa1GtUJJeg=
+KnO_!!6000000000680-2-tps-238-32.png" style=3D"width: 177px; height: 24px; =
+display: block;" border=3D"0px" /></td>
+             <td align=3D"right" style=3D"padding: 0px 6.4% 0px 0px;"><a hr=
+ef=3D"https://seller.alibaba.com/seminar/registrationPage.htm?code=3DPX002C=
+9GD&countryCode=3Den_US&inviter=3DYmluYW1yYS5kYg=3D=3D&orgId=3DMTAwMDEzOTA5=
+?gid=3D2431568525&tracelog=3Dggsedm&mt=3Dmail&crm_mtn_tracelog_log_id=3D877=
+65820122&crm_mtn_tracelog_task_id=3DT75004&crm_mtn_tracelog_template=3D2002=
+369837&as_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=
+=3Drbchalisem%40gmail.com&from=3Dglobal-seller%40email.alibaba.com" target=
+=3D"_blank" style=3D"font-size: 14px; line-height: 18px; color: rgb(34, 34,=
+ 34); font-weight: 700; text-wrap: nowrap; letter-spacing: -0.004em;">Regis=
+ter now</a></td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><p style=3D"font-family:undefined;text-align: le=
+ft;;width: 600px"><span style=3D"font-family:undefined;text-align: left;lin=
+e-height:1.5;width: 600px">Dear Ramesh babu,</span></p><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><p style=3D"font-family:undefined;text-align: le=
+ft;;width: 600px"><span style=3D"font-family:undefined;text-align: left;lin=
+e-height:1.75;width: 600px"><em>The countdown has begun!</em> Don=E2=80=99t=
+ miss your chance to gain exclusive insights and expert strategies from <st=
+rong>Rocky Lu, Head of Business, Alibaba.com India</strong>, at the <strong=
+>Alibaba.com Export Summit 2025</strong>=E2=80=94your gateway to global suc=
+cess!</span></p>
+          <ul>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.75;w=
+idth: 600px"><strong>Date</strong>: 5th March 2025 (Wednesday)</span></li>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.75;w=
+idth: 600px"><strong>Time</strong>: 3 PM onwards</span></li>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.75;w=
+idth: 600px"><strong>Venue</strong>: Hotel Suryaa, New Friends Colony, New =
+Delhi</span></li>
+          </ul><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 50px; height: 50px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><p style=3D"font-family:undefined;text-align: le=
+ft;text-align:center;;width: 600px"><span style=3D"font-family:undefined;te=
+xt-align: left;line-height:1.75;width: 600px"><strong><span style=3D"font-f=
+amily:undefined;text-align: left;font-size:16px;width: 600px">Seats are fil=
+ling fast! </span></strong></span></p><p style=3D"font-family:undefined;tex=
+t-align: left;text-align:center;;width: 600px"></p><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"=
+width: 100%;">
+           <tbody>
+            <tr>
+             <td>
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%">
+               <tbody>
+                <tr>
+                 <td align=3D"center">
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" a=
+lign=3D"center" style=3D"border-collapse: separate; background-color: rgb(2=
+55, 102, 0); border-radius: 20px;">
+                   <tbody>
+                    <tr>
+                     <td><a href=3D"https://seller.alibaba.com/seminar/regi=
+strationPage.htm?code=3DPX002C9GD&countryCode=3Den_US&inviter=3DYmluYW1yYS5=
+kYg=3D=3D&orgId=3DMTAwMDEzOTA5?gid=3D2431568525&tracelog=3Dggsedm&mt=3Dmail=
+&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_task_id=3DT75004&cr=
+m_mtn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIV=
+un5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&from=3Dglobal-seller%=
+40email.alibaba.com" style=3D"color: rgb(255, 255, 255); text-decoration: n=
+one; font-size: 22px; font-family:undefined; line-height: 14px; padding: 12=
+px 40px; vertical-align: middle; display: inline-block;">Secure yours now</=
+a></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><p style=3D"font-family:undefined;text-align: le=
+ft;text-align:center;;width: 600px"><span style=3D"font-family:undefined;te=
+xt-align: left;line-height:1.75;width: 600px"><span style=3D"font-family:un=
+defined;text-align: left;font-size:16px;width: 600px"><strong>See you at th=
+e summit!</strong></span></span></p><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <a href=3D"https://seller.alibaba.com/seminar/registrat=
+ionPage.htm?code=3DPX002C9GD&countryCode=3Den_US&inviter=3DYmluYW1yYS5kYg=
+=3D=3D&orgId=3DMTAwMDEzOTA5?gid=3D2431568525&tracelog=3Dggsedm&mt=3Dmail&cr=
+m_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_task_id=3DT75004&crm_m=
+tn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5=
+kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&from=3Dglobal-seller%40e=
+mail.alibaba.com" style=3D"color: rgb(22, 134, 204); text-decoration: none;=
+ font-size: 14px; font-family:undefined; line-height: 0;"><img width=3D"0" =
+src=3D"https://img.alicdn.com/imgextra/i3/O1CN01HPCsKJ27D3IbO5BLi_!!6000000=
+007762-0-tps-1920-2366.jpg" alt=3D"Alibaba.com" style=3D"width: 100%; box-s=
+izing: border-box; padding: 0px; display: block;" border=3D"0px" /></a> </t=
+d>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><h3 id=3D"6ktnl"><strong><span style=3D"font-fam=
+ily:undefined;text-align: left;line-height:1.5;width: 600px">Why You Can=E2=
+=80=99t Afford to Miss This:</span></strong></h3>
+          <ol>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.5;wi=
+dth: 600px">Exclusive insights on India=E2=80=99s export potential with Ali=
+baba.com</span></li>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.5;wi=
+dth: 600px">Winning strategies to stay ahead in 2025=E2=80=99s dynamic trad=
+e landscape</span></li>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.5;wi=
+dth: 600px">AI & digital tools to supercharge your export growth</span></li=
+>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.5;wi=
+dth: 600px">Connect with top global buyers and expand your reach</span></li=
+>
+           <li style=3D"font-family:undefined;text-align: left;;width: 600p=
+x"><span style=3D"font-family:undefined;text-align: left;line-height:1.5;wi=
+dth: 600px">Learn from a 10+ year Alibaba.com exporter and gain real succes=
+s insights</span></li>
+          </ol><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><p style=3D"font-family:undefined;text-align: le=
+ft;;width: 600px"><span style=3D"font-family:undefined;text-align: left;lin=
+e-height:1.75;width: 600px">Opportunities like this don=E2=80=99t come ofte=
+n=E2=80=94don=E2=80=99t miss out!</span></p><p style=3D"font-family:undefin=
+ed;text-align: left;;width: 600px"><span style=3D"font-family:undefined;tex=
+t-align: left;line-height:1.75;width: 600px">Join us and gain the <strong>k=
+nowledge, connections, and tools</strong> to make 2025 your best export yea=
+r yet!</span></p><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <p></p><p style=3D"font-family:undefined;text-align: le=
+ft;;width: 600px"><span style=3D"font-family:undefined;text-align: left;lin=
+e-height:1.75;width: 600px">Best regards,</span></p><p style=3D"font-family=
+:undefined;text-align: left;;width: 600px"><span style=3D"font-family:undef=
+ined;text-align: left;line-height:1.75;width: 600px">The Alibaba.com Team</=
+span></p><p></p>
+          <!----> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly:undefined; line-height: 20px; height: 20px; background-color: rgb(255, 2=
+55, 255);">=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+">=20
+          <table align=3D"center" style=3D"max-width: 640px; min-width: 375=
+px; width: 100%; border-collapse: collapse; border-spacing: 0px;">
+           <tbody>
+            <tr>
+             <td style=3D"padding: 40px 0px 0px;">
+              <table align=3D"center" style=3D"border-collapse: collapse; b=
+order-spacing: 0px;">
+               <tbody>
+                <tr>
+                 <td align=3D"center"><a href=3D"https://seller.alibaba.com=
+/?tracelog=3Dggsedm_footer&mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&=
+crm_mtn_tracelog_task_id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as=
+_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalis=
+em%40gmail.com&from=3Dglobal-seller%40email.alibaba.com" style=3D"text-deco=
+ration: none; color: rgb(34, 34, 34); font-size: 11px; font-weight: 400; li=
+ne-height: 13.13px; letter-spacing: -0.02em;">Offical Seller Website</a></t=
+d>
+                 <td align=3D"bottom" style=3D"padding: 2px 12px 0px; font-=
+size: 6.88px; line-height: 8.2px; color: rgb(34, 34, 34); font-weight: 400;=
+ letter-spacing: -0.0423077px; text-align: center;">|</td>
+                 <td align=3D"center"><a href=3D"https://ai.alimebot.alibab=
+a.com/intl/index.htm?spm=3Da2o8d.corp_prod_req_detail.0.0.74ca5a3cQyHudb&fr=
+om=3DAnppgS8f6l&mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tra=
+celog_task_id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_token=3DH5=
+nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.=
+com&from=3Dglobal-seller%40email.alibaba.com" style=3D"text-decoration: non=
+e; color: rgb(34, 34, 34); font-size: 11px; font-weight: 400; line-height: =
+13.13px; letter-spacing: -0.02em;">Contact Us</a></td>
+                 <td align=3D"bottom" style=3D"padding: 2px 12px 0px; font-=
+size: 6.88px; line-height: 8.2px; color: rgb(34, 34, 34); font-weight: 400;=
+ letter-spacing: -0.0423077px; text-align: center;">|</td>
+                 <td align=3D"center"><a href=3D"https://seller.alibaba.com=
+/businessblogs?tracelog=3Dggsedm_footer&mt=3Dmail&crm_mtn_tracelog_log_id=
+=3D87765820122&crm_mtn_tracelog_task_id=3DT75004&crm_mtn_tracelog_template=
+=3D2002369837&as_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7d=
+vf&to=3Drbchalisem%40gmail.com&from=3Dglobal-seller%40email.alibaba.com" st=
+yle=3D"text-decoration: none; color: rgb(34, 34, 34); font-size: 11px; font=
+-weight: 400; line-height: 13.13px; letter-spacing: -0.02em;">Business Blog=
+</a></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td style=3D"padding: 16px 0px 0px;">
+              <table align=3D"center" style=3D"border-collapse: collapse; b=
+order-spacing: 0px;">
+               <tbody>
+                <tr>
+                 <td style=3D"padding: 0px 8px;"><a href=3D"https://www.fac=
+ebook.com/SellOnAlibabacom?mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&=
+crm_mtn_tracelog_task_id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as=
+_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalis=
+em%40gmail.com&from=3Dglobal-seller%40email.alibaba.com"><img src=3D"https:=
+//gw.alicdn.com/imgextra/i3/O1CN01q41nFZ1Zm8eklDHNr_!!6000000003236-2-tps-3=
+8-38.png" width=3D"36" style=3D"width: 24px; height: 24px; display: block;"=
+ border=3D"0px" /></a></td>
+                 <td style=3D"padding: 0px 8px;"><a href=3D"https://www.you=
+tube.com/@TeamAlibaba?mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_m=
+tn_tracelog_task_id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_toke=
+n=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40=
+gmail.com&from=3Dglobal-seller%40email.alibaba.com"><img src=3D"https://gw.=
+alicdn.com/imgextra/i3/O1CN01dkvxUC1NMhGP2HbtF_!!6000000001556-2-tps-38-38.=
+png" width=3D"36" style=3D"width: 24px; height: 24px; display: block;" bord=
+er=3D"0px" /></a></td>
+                 <td style=3D"padding: 0px 8px;"><a href=3D"https://www.ins=
+tagram.com/sellonalibaba/?spm=3Da272f.28900157.0.0.3bc35380mGbrIf&mt=3Dmail=
+&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_task_id=3DT75004&cr=
+m_mtn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIV=
+un5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&from=3Dglobal-seller%=
+40email.alibaba.com"><img src=3D"https://gw.alicdn.com/imgextra/i2/O1CN0166=
+p8fh1hH0fAipnGJ_!!6000000004251-2-tps-38-38.png" width=3D"36" style=3D"widt=
+h: 24px; height: 24px; display: block;" border=3D"0px" /></a></td>
+                 <td style=3D"padding: 0px 8px;"><a href=3D"https://www.lin=
+kedin.com/company/sell-on-alibaba-com?spm=3Da272f.28900157.0.0.3bc35380mGbr=
+If&mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_task_id=
+=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2FFOrJP=
+5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&from=3Dgl=
+obal-seller%40email.alibaba.com"><img src=3D"https://gw.alicdn.com/imgextra=
+/i2/O1CN01Ke2JmA25wH7tjW9Tt_!!6000000007590-2-tps-38-38.png" width=3D"36" s=
+tyle=3D"width: 24px; height: 24px; display: block;" border=3D"0px" /></a></=
+td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+            <tr>
+             <td align=3D"center" style=3D"padding: 16px 0px 0px; color: rg=
+b(128, 128, 128); font-size: 11px; font-weight: 450; line-height: 13.13px; =
+letter-spacing: -0.02em;"><span>Read our=C2=A0</span><a href=3D"https://rul=
+e.alibaba.com/rule/detail/2034.htm?tracelog=3Dggsedm_footer&url_type=3Dedm_=
+footer_privacy&mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_trac=
+elog_task_id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_token=3DH5n=
+IdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.c=
+om&from=3Dglobal-seller%40email.alibaba.com" style=3D"color: rgb(34, 34, 34=
+);">Privacy Policy</a><span>=C2=A0and=C2=A0</span><a href=3D"https://rule.a=
+libaba.com/rule/detail/2041.htm?tracelog=3Dggsedm_footer&url_type=3Dedm_foo=
+ter_term&mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_t=
+ask_id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2=
+FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&fro=
+m=3Dglobal-seller%40email.alibaba.com" style=3D"color: rgb(34, 34, 34);">Te=
+rms of Use</a></td>
+            </tr>
+            <tr>
+             <td align=3D"center" style=3D"padding: 4px 0px 0px; color: rgb=
+(128, 128, 128); font-size: 10px; line-height: 18px; font-weight: 450;">
+              <div>
+               Alibaba.com Singapore E-commerce Private Limited 8
+              </div>
+              <div>
+               Shenton Way, #45-01 AXA Tower,Singapore 068811
+              </div>
+              <div>
+               Email: DataProtection@service.alibaba.com
+              </div></td>
+            </tr>
+            <tr>
+             <td style=3D"padding: 16px 0px 40px;">
+              <table align=3D"center" style=3D"border-collapse: collapse; b=
+order-spacing: 0px;">
+               <tbody>
+                <tr>
+                 <td><a href=3D"https://usmy.alibaba.com/user/emailservice/=
+unsubscribe_entry.htm?url_type=3Dfooter_unsub&tracelog=3Dunsub_con&_000_e_a=
+_=3Dm-NxmWjXh23LVXsjwr7SwpLcA-qPd7f8CTaLxSClkwU%3D&_000_e_t_=3DPFXWIE0Q*M7k=
+EkPRGdkmFc3d5POsBKfdgW1EJe2gapc%3D&mt=3Dmail&crm_mtn_tracelog_log_id=3D8776=
+5820122&crm_mtn_tracelog_task_id=3DT75004&crm_mtn_tracelog_template=3D20023=
+69837&as_token=3DH5nIdoZ%2FFOrJP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3D=
+rbchalisem%40gmail.com&from=3Dglobal-seller%40email.alibaba.com" style=3D"c=
+olor: rgb(34, 34, 34); font-size: 12px; font-weight: 450; line-height: 16px=
+;">Unsubscribe</a></td>
+                 <td style=3D"padding: 0px 8px;"></td>
+                 <td><a href=3D"https://usmy.alibaba.com/user/emailservice/=
+email_service_home_page.htm?flag=3Disle&tracelog=3Dedm_footer_email_prefere=
+nces&mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_task_=
+id=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2FFOr=
+JP5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&from=3D=
+global-seller%40email.alibaba.com" style=3D"color: rgb(34, 34, 34); font-si=
+ze: 12px; font-weight: 450; line-height: 16px;">Manage your preferences </a=
+></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table> </td>
+    </tr>
+   </tbody>
+  </table>=20
+  <p style=3D"font-size:40px;line-height:40px;">=C2=A0</p>  =20
+  <img style=3D"display:none; visibility:hidden; color:#fff;" width=3D"0" h=
+eight=3D"0" src=3D"https://alicrm.alibaba.com/outer/email/setReadStatus.htm=
+l?mt=3Dmail&crm_mtn_tracelog_log_id=3D87765820122&crm_mtn_tracelog_task_id=
+=3DT75004&crm_mtn_tracelog_template=3D2002369837&as_token=3DH5nIdoZ%2FFOrJP=
+5TzyxKdsKGIVun5kl%2BVOXPNKadYZ3Ys7dvf&to=3Drbchalisem%40gmail.com&from=3Dgl=
+obal-seller%40email.alibaba.com" />
+  <img style=3D"display:none; visibility:hidden; color:#fff;" width=3D"0" h=
+eight=3D"0" src=3D"http://stat.alibaba.com/mail_callback.html?crm_mtn_trace=
+log_log_id=3D87765820122&crm_mtn_tracelog_task_id=3DT75004" />
+  <img style=3D"display:none; visibility:hidden; color:#fff;" width=3D"0" h=
+eight=3D"0" src=3D"http://gm.mmstat.com/btob.10?crm_mtn_tracelog_log_id=3D8=
+7765820122&crm_mtn_tracelog_task_id=3DT75004&from=3Dglobal-seller@email.ali=
+baba.com&to=3Drbchalisem@gmail.com&from_sys=3Dnull&biz_type=3Dnull&template=
+=3D2002369837" />
+ </body>
+</html>
+------=_Part_1395963_94071040.1740739045656--

@@ -1,0 +1,530 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:9585:b0:9b:b4c0:dd5a with SMTP id gs5csp546189rbb;
+        Tue, 4 Mar 2025 20:02:48 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGJZWxVJQR7uPqIogKdUmub0hr/GFUMbDMrnlZadDcz1VSZLSMHPFI3/2Fm/+JnkHT/hyN2
+X-Received: by 2002:a05:622a:20c:b0:472:801:3e74 with SMTP id d75a77b69052e-4750b4c82camr20216171cf.41.1741147368053;
+        Tue, 04 Mar 2025 20:02:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741147368; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Y6sn5xveMisMJN9USwheqTwT/rF5gii1kLnIlxF8oiBd7Ee6TcTaNJPSHe0V2rSlLm
+         dFgiX8z1xNXBe0nziS0RoD1Afpb8oMsobSXCvHFWh+4wv6TKh3HZEngQXuFJtVz9hDAh
+         fTskuCA0RddhUpwueP/K1u8Lf3pOpM+izHxCt6SeXf1it6fv8gEKi0/dSC9oNVD+7Kyl
+         9sV1XHYJ/RD28dji/+jsy0o6piLMyTW4GjQYlPS+JvMaRRFylmevHhlpz1nTCRtAXsb7
+         /0Jg1QC0VFZkhsG1rHNAoc45NpbzUDbThY5BHL0BU7lXLzxV7KDrz2GT6jWReTnVppRE
+         5tAA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=m/ddzgWPz3PnPzTm/RmXwfiJJZZpIcx5GP53v3ZbVck=;
+        fh=roqnsWlsGR8/pkf5dcTZR56+UOvOrhWlJduTbm1tglQ=;
+        b=cyHtuYbd0My+N86DXIFdEgRF419UF6j0FrIZrJbHc3ynkZ4dGx5pmog4yghogU3iXv
+         /Nf8LbS8+9XyhYm6AN/Suf5DJDLpj85TntXpzVkW/Bt+fvL9ENTgGgVSBNzsL+LfFw99
+         ZPROW8YKXeMU3OBZuwow+iJ1hRar09PWsVzd+YJQcAi7k1aBhNbTHaIZYaI3WlNSUXRf
+         l53nDQwKMX4225EMYxAif12XyYR5aNBX3Nap9dPmhfQDXbuPY6pPci+E/q8FUio1mhHc
+         c1usYL+2nb9Mlm8xfeC+XIDzmKAcYNfUtCVjZ6H5FdjKOwT9NBuGaYp9Up2NVf9VlQEd
+         7BmQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@emailers.idfcfirstbank.com header.s=sfdkim1 header.b=MAU66vz5;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=SNJYGNm3;
+       spf=pass (google.com: domain of bounce-39_html-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com designates 136.147.143.3 as permitted sender) smtp.mailfrom=bounce-39_HTML-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=emailers.idfcfirstbank.com
+Return-Path: <bounce-39_HTML-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com>
+Received: from mta4.emailers.idfcfirstbank.com (mta4.emailers.idfcfirstbank.com. [136.147.143.3])
+        by mx.google.com with ESMTPS id d75a77b69052e-474ea6c9c03si55456371cf.636.2025.03.04.20.02.47
+        for <rbchalisem@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 04 Mar 2025 20:02:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-39_html-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com designates 136.147.143.3 as permitted sender) client-ip=136.147.143.3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@emailers.idfcfirstbank.com header.s=sfdkim1 header.b=MAU66vz5;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=SNJYGNm3;
+       spf=pass (google.com: domain of bounce-39_html-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com designates 136.147.143.3 as permitted sender) smtp.mailfrom=bounce-39_HTML-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=emailers.idfcfirstbank.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=sfdkim1; d=emailers.idfcfirstbank.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=alwaysyoufirst@emailers.idfcfirstbank.com;
+ bh=m/ddzgWPz3PnPzTm/RmXwfiJJZZpIcx5GP53v3ZbVck=;
+ b=MAU66vz5I9YT18R+QKlKc+TZDUxHPxhfT66HQnKOf3G/ljz1BtfFvYiMbvgO8lL7zmclYov5uIRr
+   fEw1ZJ8cXbKwfbgiLKzskKP2IvMn/DTQEcHjucU1iGiDEiu+9BvU6eWXXVO3e71BGM1g9nGJV0cb
+   r8u/STv2vj792KKea0SW3vEn0ZwDqN8ot0vbHUDF2A/N6WSrOb0hciw7bYpC1ISV1TSLZ2PaHNeC
+   2q+0G3DRxSqH5T3aytAOF12Ju2pb/RRSXooS0UvXTXVv4Jv+F5or20ZrSBsUwgC8UH9HWuwpk4E/
+   F/GwC6xSDZi9o3abIy9HdB2bwUVkZMCHtW6R7w==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim1; d=s1.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=m/ddzgWPz3PnPzTm/RmXwfiJJZZpIcx5GP53v3ZbVck=;
+ b=SNJYGNm3mig2WPYf+idgjuhOC3z/NMZJqyXkJvwOx/ETXda3X0u/jnbLNuZaGGdSkQkahRv8ZhiW
+   7xbNjxvOflfObosawmaokjhfXtmAkXqmDyq49z7AdUUbZL15NSz9eZIot0WT3dJSbTCTgRmpeeDc
+   xc6LvbD/EXJYrZMwRreh6jK9qp2RcpgkNOz+qQQWnPRB2KsJLkpPP1vMVyP+5N8Z7b0pyx7VYXXx
+   GpAGCazu2N8Hp/pisoGusMnq72EX4qf46mOi17X129LTsbTCrxU+9dzXbuBoKJgQfhwSDYxdhX5b
+   vfpop/6mFlC9zLXrLvl5Fg10E1nKiaVCgf+Krg==
+Received: by mta4.emailers.idfcfirstbank.com id hov6eg2fmd4s for <rbchalisem@gmail.com>; Wed, 5 Mar 2025 04:02:47 +0000 (envelope-from <bounce-39_HTML-748596781-1035838-524000163-166@bounce.emailers.idfcfirstbank.com>)
+From: "IDFC FIRST Bank" <alwaysyoufirst@emailers.idfcfirstbank.com>
+To: <rbchalisem@gmail.com>
+Subject: What if you could spend as you please?
+Date: Tue, 04 Mar 2025 22:02:47 -0600
+List-Unsubscribe: <https://click.emailers.idfcfirstbank.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MjQwMDAxNjMiLCJzIjoiNzQ4NTk2NzgxIiwibGlkIjoiMzkiLCJqIjoiMTAzNTgzOCIsImpiIjoiMTY2IiwiZCI6IjEwMTg5In0.7_AKfWEglwCE3xZDu0ZwnTbpEEDahCi-ANmODlB5zNs>, <mailto:leave-fd7f17791a3c402029-fe1813747d610d7b721c71-fe93157076610c7e7d-fe3a11727164047d741273-ff62157673@leave.emailers.idfcfirstbank.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Reply-To" <reply-1035838-39_HTML-748596781-524000163-166@reply.emailers.idfcfirstbank.com>
+X-SFMC-Stack: 1
+x-job: 524000163_1035838
+Message-ID: <8996ee77-a343-4b5d-baf2-7d2d119b187b@ind1s01mta1390.xt.local>
+Feedback-ID: 524000163:1035838:136.147.143.3:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="Oz9vaBqiKaIw=_?:"
+
+This is a multi-part message in MIME format.
+
+--Oz9vaBqiKaIw=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+ 
+ 
+
+ 
+
+
+
+https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb791b4c311e1760d36a07fb6b0f69f40e93ca81eccba0ba94b1803ecbb4f861c6f2e37c65519b4ca987c4b88825f2cfa2c2ecb12718d167e7c 
+
+
+
+
+
+
+ 
+ 
+
+ 
+ 
+ 
+ https://my.idfcfirstbank.com/firstmoney/personalLoan/paperless/generatetoken/0/HPE/ACEPLEMAIL/0/Cross%20Sell%20PL/False/0/?utm_source=HPE&utm_medium=EMAIL&utm_campaign=VR_200112722&utm_id=053c2c256595dac942983f15f6163adff5fdfa574f57519dadee068a446511f5&utm_action=AC_100048698&utm_variant=VR_200112722&utm_batch=20000272 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+Dear Ramesh Babu Chalisem,
+
+<p>Whether, you've got an unexpected expense to meet or a last-minute plan, we've got the perfect solution for you. Introducing <strong style="color: rgb(230, 0, 0);">FIRSTmoney</strong>, a pre-approved credit limit for all your instant cash needs.</p><p><br></p><p>We have a pre-approved credit limit of <strong>₹50000</strong> available just for you!</p>
+ 
+ 
+ https://my.idfcfirstbank.com/firstmoney/personalLoan/paperless/generatetoken/0/HPE/ACEPLEMAIL/0/Cross%20Sell%20PL/False/0/?utm_source=HPE&utm_medium=EMAIL&utm_campaign=VR_200112722&utm_id=053c2c256595dac942983f15f6163adff5fdfa574f57519dadee068a446511f5&utm_action=AC_100048698&utm_variant=VR_200112722&utm_batch=20000272 
+
+ 
+ 
+ 
+ 
+
+
+ 
+ 
+
+ 
+
+
+
+
+
+
+Always You First,
+Team IDFC FIRST Bank
+
+
+
+
+
+
+
+
+IDFC FIRST Bank
+
+tel:180010888 
+
+tel:180010888 
+1800 10 888
+
+https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7c1c1563677abaf378ae6a113cbebf0958706c9361f720c78bad5de5e5129e3ba8dd65a898eee7318fafa294c66f24161a3be532cd171d04e 
+
+https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb744baa435753e799b1be8938a15507cec7b9f97edd416a33716274d8a9ba395720b3f40b52e670c58288dba96d93621f2923ed30725dfec00 
+
+https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7fa8ece96755d821e35121bee1822359c0cfeddec7bd25808ac01ce5d92aff9817c92e134d3b7e08bf2b1bbbabb99847eba712e37d56c69a9 
+
+https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7d6d8688e66645e79ba61ef5f5e328fe45e888f67df9a83a81f6702eadd1c9ec6d94cb6984c6666e69c7072e7096b72e34729d574df33f470 
+
+https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb74ededd0b4827a9c90c2d653c3392a28b2324cbf80f3b13067c2b3f172903a840f2045a03f256249c2d1233545f61be234ac92e962bcabd30 
+
+  ©2025 IDFC FIRST Bank. All rights reserved. 
+
+
+
+
+
+
+ 
+ 
+
+ Want to 
+https://cloud.emailers.idfcfirstbank.com/Email-Preference?qs=9b7156c75e6600e08c1c4ed1317700f492839c4f2f49e892b97bbeef631151aa5a684019e65fc1471659eb82bd15e0dc 
+unsubscribe ? We are sorry to see you go!
+
+ IDFC FIRST Bank Limited, KRM Towers, 7th Floor No. 1, Harrington Road, Chetpet, Chennai, Tamil Nadu, 600031, India
+
+
+ 
+ 
+
+
+ 
+ 
+
+
+--Oz9vaBqiKaIw=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}
+      p { margin: 1em 0;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      @-ms-viewport{ width: device-width;}
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        .container {width: 100% !important;}
+        .footer { width:auto !important; margin-left:0; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        img { max-width:100% !important; height:auto !important; max-height:auto !important;}
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+body, .tb_properties{font-family: Tahoma, Geneva, sans-serif !important; font-size: 11px !important; color: #58595B !important; line-height: 1.5 !important; padding: 0px !important; }.buttonstyles{font-family: Tahoma, Geneva, sans-serif !important; font-size: 13px !important; color: #000000 !important; padding: 10px !important; }h1{font-family: Tahoma, Geneva, sans-serif !important; font-size: 22px !important; color: #202020 !important; line-height: 1 !important; }h2{font-family: Tahoma, Geneva, sans-serif !important; font-size: 20px !important; color: #202020 !important; line-height: 1 !important; }h3{font-family: Tahoma, Geneva, sans-serif !important; font-size: 18px !important; color:
+ #202020 !important; line-height: 1 !important; }a:not(.buttonstyles){line-height: 1 !important; }.mobile-hidden{display: none !important; }.responsive-td {width: 100% !important; display: block !important; padding: 0 !important;}
+/* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+      }
+      @media only screen and (max-width: 640px) {
+        .container { width:100% !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        .photo img { width:100% !important; height:auto !important;}
+        .nav5, .nav6 { display: none !important;}
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+    </style>
+    <!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */               body, table, td {                  font-family : Tahoma, Geneva, sans-serif;                  line-height : 100%;                  font-size : 14px;                  color : #58595B;               }           /* End Outlook Font Fix */       </style>     <![endif]-->
+  </head>
+  <body bgcolor="#EFEFEF" text="#808080" style="margin: 0px; -webkit-text-size-adjust:none;background-color : #EFEFEF; font-family : Tahoma, Geneva, sans-serif; line-height : 100%; font-size : 14px; color : #58595B; padding : 5px; "><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Enjoy a pre-approved credit limit with FIRST Money!</div>
+    <div style="font-size:0; line-height:0;"><img src="https://click.emailers.idfcfirstbank.com/open.aspx?ffcb10-fe93157076610c7e7d-fe0f1c7772620d74721374-fe3a11727164047d741273-ff931779-fe1813747d610d7b721c71-ff62157673&d=10189&bmt=0" width="1" height="1" alt=""></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td align="center" valign="top">
+          
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table style="background-color : #FFFFFF; border : 0px solid transparent;font-size : 14px; font-family : Tahoma, Geneva, sans-serif; line-height : 100%; color : #58595B; " class="tb_properties border_style" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td class="content_padding" style="border:0px;padding : 10px; ">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td align="left" class="header" valign="top">
+                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; border-top: 0px; border-right: 0px; border-bottom: 1px solid transparent; border-left: 0px; " class="slot-styling"><tr><td style="padding: 0px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!-- RB Skin -->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; border: 0px solid transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner">
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb791b4c311e1760d36a07fb6b0f69f40e93ca81eccba0ba94b1803ecbb4f861c6f2e37c65519b4ca987c4b88825f2cfa2c2ecb12718d167e7c" title=""   data-linkto="http://"><img data-assetid="156498" src="https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/hpe-images/Header-Banner-IDFC-1.jpg" alt="" width="126" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table></td></tr></table>
+</td></tr></table></td></tr></table>
+                                  
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="" valign="top">
+                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; border: 0px; min-width: 100%; " class="slot-styling"><tr><td style="padding: 0px; " class="slot-styling camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"> 
+ 
+ <a  title="CTA_1" href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7a1106dd04f90fe90bfaeef06be06c2ce21155e940ddeb89ee9d536aab767705be827a10444fed5cf645b3bc4fd2a3cd4d6c6db4e530ca40e"><img src="https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/creatives/FM-Launch-Main-Image.jpeg" style="display: block; padding: 0px; text-align: center; border: 0px solid transparent; height: auto; width: 100%;" width="600"></a>
+ 
+  
+      
+   
+   
+    </td>
+  </tr>
+</table>
+
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"> </td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 10px 10px 2px; " class="stylingblock-content-wrapper camarker-inner"><div style="line-height: 20px;">
+	<span style="font-size:12px;"><span style="color:#58595b;"><span style="font-family:Tahoma,Geneva,sans-serif;"><span style="line-height:107%">Dear </span></span></span><span style="font-family:Tahoma,Geneva,sans-serif;">Ramesh Babu Chalisem</span><span style="color:#58595b;"><span style="font-family:Tahoma,Geneva,sans-serif;"><span style="line-height:107%">,</span><br>
+	<p>Whether, you've got an unexpected expense to meet or a last-minute plan, we've got the perfect solution for you. Introducing <strong style="color: rgb(230, 0, 0);">FIRSTmoney</strong>, a pre-approved credit limit for all your instant cash needs.</p><p><br></p><p>We have a pre-approved credit limit of <strong>₹50000</strong> available just for you!</p></span></span></span></div></td></tr></table><table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"> 
+ 
+ <a  title="CTA_2" href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7d87c2bfc5be369f892aa440d02bce9290cea5d26304035d53f25dc336834821ffd34f662d18fbcd6a56f6894cba03bbd55ab9e690eb409a8">
+<img src="https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/creatives/FM-Launch-features.jpeg" width="600" style="display: block; padding: 0px; text-align: center; border: 0px solid transparent; height: auto; width: 100%;"> </a>
+ 
+  
+      
+    </td>
+  </tr>
+</table></td></tr></table>
+                                  
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="" valign="top">
+                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; border-top: 0px; border-right: 0px; border-bottom: 2px groove #9D1D27; border-left: 0px; " class="slot-styling"><tr><td style="padding: 0px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+</td></tr></table>
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+<div style="line-height: 20px;">
+ <span style="font-size:12px;"><span style="color:#58595b;"><span style="font-family:Tahoma,Geneva,sans-serif;"></span></span></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><div style="line-height: 20px;">
+ <span style="font-size:12px;"><span style="color:#58595b;"><span style="font-family:Tahoma,Geneva,sans-serif;"></span></span></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 2px 10px 10px; " class="stylingblock-content-wrapper camarker-inner"><div style="line-height: 120%;">
+	<span style="font-family:Tahoma,Geneva,sans-serif;"><span style="font-size:14px;"><span style="color:#58595b;">Always You First,</span><br>
+	<b><span style="color:#9d1d27;">Team IDFC FIRST Bank</span></b></span></span></div></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 5px 5px 0px; " class="stylingblock-content-wrapper camarker-inner">
+
+<!-- <table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="left"><img src="https://www.idfcfirstbank.com/content/dam/IDFCFirstBank/creative/sticker-low-res.png" alt="" height="135" width="135" style="display: block; padding: 0px; text-align: left; height: 135px; width: 135px; border: 0px;"></td></tr></table> -->
+
+</td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><title>IDFC FIRST Bank</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<center>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+        
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" valign="middle">
+                
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    
+                      <tr>
+                              <td align="center" valign="middle">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    
+                            <tr>
+                              
+                            
+                            
+                             <td align="center" valign="middle" style=" padding-top:15px; padding-bottom:15px;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                
+                                <tr>
+                            <td align="center" valign="middle">
+                            
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                 <tr>
+                            <td align="center" valign="middle">
+                                </td></tr>
+                    
+                     <tr>
+                            <td align="center" valign="middle" bgcolor="#e6e7e8" style="padding:10px; border-radius:0 0 20px 20px;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                            <td width="383" align="center" valign="middle">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                    <td width="58%" align="center" valign="top">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                               <tr>
+                    <td align="center" valign="top">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">  
+                           <tr>
+                    <td width="43" align="left" valign="middle">
+                        <a href="tel:180010888" target="_blank" rel="noopener">
+                            <img style="display:block;" src="https://image.emailers.idfcfirstbank.com/lib/fe3a11727164047d741273/m/3/07c5af53-f7da-4166-823b-b6e82ab59efa.png" width="30" height="30" border="0" alt=""></a>      
+                      </td>
+                            
+                                      <td width="600" align="left" valign="middle">
+                                     
+                                        <font color="#000000" style="font-size: 12px; line-height:14px; " face="Arial, Helvetica, sans-serif">
+<a href="tel:180010888" target="_blank" rel="noopener" style=" color:#000000; text-decoration:none;"><strong>1800 10 888</strong></a>
+
+                                       </font>
+                                      
+                                      </td>      
+                                      
+                                  </tr>        
+                    </table></td></tr>
+                    
+                        </table></td>
+                       
+                    </tr>
+                    </table></td>
+                    
+                  
+                            <td align="center" valign="middle">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0"> 
+                                 <tr>
+                    <td width="25" align="right" valign="middle">
+                        <a href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7c1c1563677abaf378ae6a113cbebf0958706c9361f720c78bad5de5e5129e3ba8dd65a898eee7318fafa294c66f24161a3be532cd171d04e" target="_blank">
+                            <img style="display:block;" src="https://image.emailers.idfcfirstbank.com/lib/fe3a11727164047d741273/m/3/8270ac1f-6de2-4553-ab7b-84b9b5a9bdc0.png" width="30" height="30" border="0" alt=""></a>
+                         
+                      </td>
+                            
+                       <td width="25" align="center" valign="middle">
+                        <a href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb744baa435753e799b1be8938a15507cec7b9f97edd416a33716274d8a9ba395720b3f40b52e670c58288dba96d93621f2923ed30725dfec00" target="_blank">
+                            <img style="display:block;" src="https://image.emailers.idfcfirstbank.com/lib/fe3a11727164047d741273/m/3/5c571376-3164-4968-86d6-9bb6b289d1ae.png" width="30" height="30" border="0" alt=""></a>
+                         
+                      </td>        
+                          
+                          <td width="25" align="center" valign="middle">
+                        <a href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7fa8ece96755d821e35121bee1822359c0cfeddec7bd25808ac01ce5d92aff9817c92e134d3b7e08bf2b1bbbabb99847eba712e37d56c69a9" target="_blank">
+                            <img style="display:block;" src="https://image.emailers.idfcfirstbank.com/lib/fe3a11727164047d741273/m/1/c8784b21-6586-4a9e-b045-ac2cb93b4526.png" width="30" height="30" border="0" alt=""></a>
+                         
+                      </td>  
+                            
+                            <td width="25" align="center" valign="middle">
+                        <a href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7d6d8688e66645e79ba61ef5f5e328fe45e888f67df9a83a81f6702eadd1c9ec6d94cb6984c6666e69c7072e7096b72e34729d574df33f470" target="_blank">
+                            <img style="display:block;" src="https://image.emailers.idfcfirstbank.com/lib/fe3a11727164047d741273/m/3/6a3d3fb9-28a8-44fe-9a87-1b80d93181ed.png" width="30" height="30" border="0" alt=""></a>
+                         
+                      </td>
+                                            
+                               <td width="25" align="center" valign="middle">
+                        <a href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb74ededd0b4827a9c90c2d653c3392a28b2324cbf80f3b13067c2b3f172903a840f2045a03f256249c2d1233545f61be234ac92e962bcabd30" target="_blank">
+                            <img style="display:block;" src="https://image.emailers.idfcfirstbank.com/lib/fe3a11727164047d741273/m/3/f9acac76-bf94-4dcd-85ed-3529525911c9.png" width="30" height="30" border="0" alt=""></a>
+                         
+                      </td>       
+                           </tr></table></td>      
+                    
+                    </tr>
+                    
+                    <tr>
+                            <td>&nbsp;</td>
+                    
+                  
+                            <td width="197" align="right" valign="right" style="padding:6px;">
+                                     
+                                       <font color="#58595b" style="font-size: 8px; line-height:11px; " face="Arial, Helvetica, sans-serif"> ©2025 IDFC FIRST Bank. All rights reserved. </font>
+                                      
+                                      </td>      
+                    
+                    </tr>
+                    
+                     </table></td> 
+                      </tr>
+                      </table></td> 
+                      </tr>
+                      </table>
+                      </td>      
+                    </tr>
+                      
+                    </table></td></tr>
+                    
+                  </table>
+                    
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        
+        
+  </table>
+</center>
+
+
+
+</td></tr></table>
+
+</td></tr></table></td></tr></table>
+                                  
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="" valign="top">
+                                  <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="slot-styling"><tr><td style="padding: 0px; " class="slot-styling camarker-inner"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #9D1D27; border: 0px; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 5px 20px; " class="stylingblock-content-wrapper camarker-inner"><div style="text-align: center;">
+	<div style="line-height: 100%;">
+		<span style="text-align: center; color: rgb(255, 255, 255); font-family: arial, helvetica, sans-serif; font-size: 10px;">Want to <a   data-linkto="other" href="https://click.emailers.idfcfirstbank.com/?qs=93c3e0a6e9552eb7044796ac247f7201353d434e05f78df8a71b73113244f6cfbb263586a1783c50c56ed518640db40442b3652a7db64d2bdaac28e07455769a" style="color:#FFFFFF;text-decoration:underline;font-weight:normal;line-height:100%;" title="Unsubscribe">unsubscribe</a>? We are sorry to see you go!</span><br>
+		&nbsp;</div><div style="text-align: center; line-height: 100%;">
+		<span style="color: rgb(255, 255, 255); font-family: arial, helvetica, sans-serif; font-size: 10px;">IDFC FIRST Bank Limited, KRM Towers, 7th Floor No. 1, Harrington Road, Chetpet, Chennai, Tamil Nadu, 600031, India</span></div></div></td></tr></table></td></tr></table>
+                                  
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+--Oz9vaBqiKaIw=_?:--
+

@@ -1,0 +1,112 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:c10:b0:9b:b4c0:dd5a with SMTP id ix16csp1883489rbb;
+        Mon, 24 Mar 2025 02:48:02 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEc5HLeOeShaw9bzF+o02+fbuMnSzLWqJ2alqO9i9kYz7zfb9rw1VGJDkRlJq7OMxgFXkGE
+X-Received: by 2002:a05:622a:8c4:b0:476:8cad:72d7 with SMTP id d75a77b69052e-4771dd6086amr197780531cf.8.1742809682597;
+        Mon, 24 Mar 2025 02:48:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742809682; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dFD2VPb9hkAByfq3vTEYFX7hjGEmjOUKR587PqquSEmkhKd9eyGenJ97C8294j+I5h
+         mgNTcWjT9tJPxSJ//TVRptf22uSm2bpOaomN6ZUIczQR79C09zheCStN1TuzhC1jFhDG
+         rrc+nHHrmsjWV/k2vMP8rE1tSFWHsT6ydMYvRuHAfH/sPA1FTWM7UbBPz7LIKvVX23O0
+         RLbx0Ey4elnm2REHWB5Jx/AJzqmDRbQ+gDMA6MDjBiNIU9ZV0DN26zFiUH8LAU7us8Or
+         XJs+gg/C8i5/Bfh8CswubciKWVbvVF0uZft531PQJjuJn7cyP94yx23bApzz0cvzRw6Z
+         4CBQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:feedback-id:list-unsubscribe
+         :content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:dkim-signature:dkim-signature;
+        bh=x9GfQvRNmx73fLR6wVmK8Za+lz3O437a2DFSNUHonJo=;
+        fh=XkFoFqgoX09ZGStpvfMsAvVTAzcEtLyPvLQRoiCKO1E=;
+        b=CXdGdt1FMsEcR+B4+hhFAbe6g4c/fL58rz9Us+sexYe81h5BA5Dx8cHLuRCL5blPQK
+         9bVl9+4JcqoROMquncdw/zdmAzSa/BEpeU19FOivggc4hGSLIVNWk4XwwWZqxBN3bkON
+         kMpurs+0CZTMiuASdpDUKL7fpxWrCkE0i5pc3qrD+wuA87DWfEEI13O5VWY5lm8KHkCh
+         cOXkcRrDMmDgaEOIG40xwBVzzDYS7CwkPIaWg7LTRd7NSiiGF8uIWvimm2RbtfLjlqM/
+         zYyDNlp2XOML/88Km2rMfqLrJ51Bt5X8sbDxb3RC6TVwinkU9TKOYtudh0LKwzwAMSur
+         iXHg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nc.bajajallianz.co.in header.s=nc2048 header.b=HsIu5+g4;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=ERBZApJU;
+       spf=pass (google.com: domain of 17427546076718767-44383-1-gmail.com@auto.nc.bajajallianz.co.in designates 175.158.66.198 as permitted sender) smtp.mailfrom=17427546076718767-44383-1-gmail.com@auto.nc.bajajallianz.co.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bajajallianz.co.in
+Return-Path: <17427546076718767-44383-1-gmail.com@auto.nc.bajajallianz.co.in>
+Received: from mta6-66.198.ptransmail.com (mta6-66.198.ptransmail.com. [175.158.66.198])
+        by mx.google.com with ESMTPS id d75a77b69052e-4771fa5c83fsi67422441cf.175.2025.03.24.02.48.02
+        for <rbchalisem@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 24 Mar 2025 02:48:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 17427546076718767-44383-1-gmail.com@auto.nc.bajajallianz.co.in designates 175.158.66.198 as permitted sender) client-ip=175.158.66.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nc.bajajallianz.co.in header.s=nc2048 header.b=HsIu5+g4;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=ERBZApJU;
+       spf=pass (google.com: domain of 17427546076718767-44383-1-gmail.com@auto.nc.bajajallianz.co.in designates 175.158.66.198 as permitted sender) smtp.mailfrom=17427546076718767-44383-1-gmail.com@auto.nc.bajajallianz.co.in;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bajajallianz.co.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=nc.bajajallianz.co.in; s=nc2048;
+	h=list-unsubscribe-post:feedback-id:list-unsubscribe:content-transfer-encoding:
+	 content-type:mime-version:message-id:subject:from:to:from:to:subject;
+	bh=x9GfQvRNmx73fLR6wVmK8Za+lz3O437a2DFSNUHonJo=;
+	b=HsIu5+g4WRxo4ER4PyFGzBXwQPhjPkNAxa1Gfzae4XBLUBJXUvz3Lz9YH8vcnuSGQxVid8d11LfVI
+	 JFO4o002S/1eJmf4oLldwegXgsTvht1AdYlK+uymtSJQ9uuULvL+e1kPTv8If06OM+KXV4BrOe9hXy
+	 fkQ6lA4Ym2M7fjjLQeFHnmRH019Lz4hbdQcdYbuf6rLpEuNkK7pvdv8VYsrqkSKt2h7hezujGKx4Gb
+	 C7FJ2y4psr6P92Exw+2eJjrH1JyWTImMXgYYPr8LhWM7zEM5jVsCk5KoYwlpyF7tv3KUtgaMMOggyQ
+	 2HW1yRnQnwROKtMmHbNGG+d+Ue4Krsg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=env.etransmail.com; s=fnc;
+	h=list-unsubscribe-post:feedback-id:list-unsubscribe:content-transfer-encoding:
+	 content-type:mime-version:message-id:subject:from:to:from:to:subject;
+	bh=x9GfQvRNmx73fLR6wVmK8Za+lz3O437a2DFSNUHonJo=;
+	b=ERBZApJUJOslAwOTfSLWvSU7QI2I2Mu5tNcs0EV5oF696NLcOzSckk8kUw1wdgrk+l+sIwe7lrx6z
+	 11VwjLo4eduTj5Px/R1KqROh1VvQwruslEfo8K/gL3G5yUKmteb+Ipbknl4Nrpj2WJk2MPYnJbkr4a
+	 qtkPOA1FKzOuxJUo=
+Date: Mon, 24 Mar 2025 15:18:02 +0530
+To: rbchalisem@gmail.com
+From: =?UTF-8?B?QmFqYWogQWxsaWFueg==?= <mailer@nc.bajajallianz.co.in>
+Subject: =?UTF-8?B?UmVuZXcgdG9kYXkgdG8gc2VjdXJlIHlvdXIgdG9tb3Jyb3ch?=
+Message-Id: <ourlve17427546076718767@nc.bajajallianz.co.in>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_174280959127887234"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://unsub-api.netcorecloud.net/YHNMJN?id=44383=ZxpRUlBRBw1XThkRFRJEFRQURhBFRkZGGBUQRhMWFBMSRkFCREUUFUQSGREVEkQVFAQaQgcFDgdUXEMDXnZTXlMPDUwHCllJVQUNAwIHUAMEA1AHVF5RUA9JWBJHRkcJHUkUDBcQVhgFQlAfW1cQVltGA1MJCRMCFltVEhxvfH1/LC9dDQFIQ1c=>, <mailto:17427546076718767-44383-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+Feedback-Id: 44383:202503:1:falconide
+X-Delivery: smt_promo|44383
+X-Fncid: 44383-17427546076718767-0
+X-Injtime: 1742809591
+X-Traffic-Type: 44383-3
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+This is a multi-part message in MIME format.
+
+--_----------=_174280959127887234
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset="utf-8"
+
+                       Delivering Contactless Claim Service with Caringly Yours App      Download Now               Bajaj Allianz General Insurance Co. Ltd. , Bajaj Allianz House, Airport Road, Yerawada, Pune - 411006. IRDAI Reg No.: 113. CIN: U66010PN2000PLC015329 | web: www.bajajallianz.com | Toll free: 1800-209-5858 / 1800-209-0144 For more details on risk factors and Terms and Conditions, please read the sales brochure before concluding a sale. Bjaz -0-4585/04-11-2024       Follow us on                                              If you can't view the emailer   Click here      To unsubscribe 
+from the mailing list, please   Click here            To unsubscribe from these mailings, you may opt out here 
+
+--_----------=_174280959127887234
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><html><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Bajaj Allianz General Insurance</title> <style> .Table_01 { padding-bottom: 0%; margin-bottom: 0%; } .tbody { font-family: 'Allianz Sans', sans-serif; } .logo { padding-top: 12px; padding-bottom: 12px; padding-right: 20px; height: 60px; width: 100px; } .delivering { color: #ffffff; margin-top: 0%; } .bajaj_add { padding: 1px 20px; color: #424242; line-height: 10px; margin-top: 5px; margin-bottom: 0%; } .social_media { padding: 1px 20px; color: #424242; margin-bottom: 0px; 
+margin-top: 5px; } .unsubscribe { padding: 1px 20px; margin-top: 5px; } .click { color: #ffffff; background-color: rgb(166, 47, 4); padding: 2px; text-decoration: none; } a { color: inherit; } @media only screen and (max-width: 600px) { .logo { padding-right: 10px; height: 40px; width: 70px; } .unsubscribe { padding: 1px 20px; line-height: 20px; margin-top: 3px; } .click { color: #ffffff; background-color: rgb(129, 38, 5); padding: 1px; text-decoration: none; } } </style></head><body> <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#cccccc"> <tbody> <tr> <td> <center> <table 
+bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" id="Table_01" width="600"> <tr style="background-color: #0f6bb4;"> <td colspan="2"> <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwAUVMLXUQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=TxQ0fSM+K30bXxJmNlYOIXVQA1ICRx8UYCx+fXo/PShnfSZ9NBVZF3twSVRUS1wBBAFJAlsEV08AB1UDCgVSDxYaRHotNSlrG18SWhESSRcCTB4VQxIdVFEJU15YCg4PU14eFgVYDhpGUgoDFgcJF1JYEUFOQw4HVVsAQBVYCUxbREtKAQ8ARVgJH1QKE0tJTwtUB1gAQRtCBlxRTgcOSFpECVRZRwxZXVQdOQ8JWBpJ&clientid=44382&fl=XEISSBdbSh1iJ3lmKT9kP2gsfSt3PGx4ZS5wcWs7RBRXVw1LEkUCQV1YCjkPCVhjZnIjbC17O0QWVRBBUVsDS0dpFVcREwZXBCdifDojdA==&ext=" 
+target="_blank"> <img src="https://d1l8l3rp33cdzs.cloudfront.net/images/bajajallianzsmarty/templates/2183/car2.jpg" alt="banner" width="600" class="banner"> </a> </td> </tr> </table> <table border="0" cellpadding="0" cellspacing="0" id="Table_footer" width="600"> <tbody style="background-color: #e8e8ea; font-size: 7px;"> <tr style="background-color: #0f6bb4;"> <td style="padding-left: 20px; padding-top: 5px; padding-bottom: 5px;"> <span class="delivering"><strong>Delivering Contactless Claim Service with Caringly Yours App</strong></span> </td> </tr> <tr> <td style="padding-top: 7px;" bgcolor="#e7e7e9"> 
+<div class="download_now" style="background-color: #e8e8ea;"> <b style="vertical-align: middle; padding-left: 20px;">Download Now</b> &nbsp; <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwDUVcBUEQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1JCVFLSwFWC18PVExXCl4ZQxddRlxJAxZCQ0tcA0MCXFhE&ext=aWQ9Y29tLmJhLmNwLmNvbnRyb2xsZXI=" target="_blank" on="tap:AMP.setState({event_type:'click',buttton_name:'en-google play',action_desc:'redirect 
+to https://play.google.com/store/apps/details?id=com.ba.cp.controller'}),click_form.submit"> <img style="vertical-align: middle;" src="https://www.bajajallianz.com/content/dam/bagic/index/icon-google-play.png" width="60" height="20"> </a> <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwDUVcBUUQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1YFUBBSwdJFFQGHwFbCBxfXkxTRElJAQdAWQpfCk5OTFtCFhVODwEBDAVRA1MAUlo=&ext=" target="_blank" 
+on="tap:AMP.setState({event_type:'click',buttton_name:'en-apple store',action_desc:'redirect to https://apps.apple.com/in/app/caringly-yours/id982500448'}),click_form.submit"> <img style="vertical-align: middle;" src="https://www.bajajallianz.com/content/dam/bagic/index/icon-app-store-down.png" width="60" height="20"> </a> </div> </td> </tr> <tr> <td> <p class="bajaj_add"> <strong style="font-size: 8px;">Bajaj Allianz General Insurance Co. Ltd.</strong>, Bajaj Allianz House, Airport Road, Yerawada, Pune - 411006. IRDAI Reg No.: 113. CIN: U66010PN2000PLC015329 | web: www.bajajallianz.com | Toll 
+free: 1800-209-5858 / 1800-209-0144 For more details on risk factors and Terms and Conditions, please read the sales brochure before concluding a sale. Bjaz -0-4585/04-11-2024 </p> </td> </tr> <tr> <td> <p class="social_media"> <strong style="vertical-align: middle;">Follow us on &nbsp; &nbsp;</strong> <span style="vertical-align: middle;"> <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwAUFcBVEQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1OEkccAwdaAVoMXgkaBlxbHyFTXlgMIwpeWQVWHBg=&ext=" 
+target="_blank"> <img src="https://swsilt.stripocdn.email/content/guids/CABINET_3a65ab5cb47d9d132411fef22ce5b61ebe8a16684ac8695b3e8a1a7bb5cb68b3/images/fb.png" width="20" height="21" alt="Facebook"> </a> &nbsp;&nbsp; <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwDUVMJUUQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSF5OSltXFkRTAhRYCRYAXg8bB1JcUQlTWFUPAwhIVwFWA0UCWRs=&ext=" target="_blank"> <img src="https://swsilt.stripocdn.email/content/guids/CABINET_3a65ab5cb47d9d132411fef22ce5b61ebe8a16684ac8695b3e8a1a7bb5cb68b3/images/insta.png" 
+width="20" height="21" alt="Instagram"> </a> &nbsp;&nbsp; <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwGGRoJ&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1NEllGEQNLSlsMXE12BFlXWiJeWFAHDBw=&ext=" target="_blank"> <img src="https://swsilt.stripocdn.email/content/guids/CABINET_3a65ab5cb47d9d132411fef22ce5b61ebe8a16684ac8695b3e8a1a7bb5cb68b3/images/tw.png" width="20" height="21" alt="Twitter"> </a> &nbsp;&nbsp; <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwHGRoJ&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1OEkccCQ9XD10HWAwaBlxbHwBdWUkHDB8dBlELUgBX&ext=" 
+target="_blank"> <img src="https://swsilt.stripocdn.email/content/guids/CABINET_3a65ab5cb47d9d132411fef22ce5b61ebe8a16684ac8695b3e8a1a7bb5cb68b3/images/in.png" width="20" height="21" alt="LinkedIn"> </a> &nbsp;&nbsp; <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwAVF8BU0QfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1OEkccEQ5LAVkHQkxaAEcZcAFTXlgMAwpeWQVWHFAGW1FFBQo=&ext=" target="_blank"> <img src="https://swsilt.stripocdn.email/content/guids/CABINET_3a65ab5cb47d9d132411fef22ce5b61ebe8a16684ac8695b3e8a1a7bb5cb68b3/images/threads.png" 
+width="20" height="21" alt="Threads"> </a> &nbsp;&nbsp; <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwDXVEIUEQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1OEkccHAlMEE0BVExXCl4ZcgJYVVMnDgpbUQpCIX4g&ext=" target="_blank"> <img src="https://swsilt.stripocdn.email/content/guids/CABINET_3a65ab5cb47d9d132411fef22ce5b61ebe8a16684ac8695b3e8a1a7bb5cb68b3/images/youtube.png" width="20" height="21" alt="YouTube"> </a> </span> </p> 
+</td> </tr> <tr> <td> <p class="unsubscribe"> If you can't view the emailer &nbsp; <span class="click"><a href="#" target="_blank">Click here</a></span> &nbsp; &nbsp;&nbsp; To unsubscribe from the mailing list, please &nbsp; <span class="click"><a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUolRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwAVVMBXUQfAQ==&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&pp=0&clientid=44382&fl=XEISSBdbSh1eAF5XFwdVSloCWwNeBF9aWQJcThcFDQsdcgVfD1QtTUAYBwcNCkpcW1kLRyBVCg4eUwo=&ext=c291cmNlPUJDUA==" 
+target="_blank">Click here</a></span> </p> </td> </tr> </tbody> </table> </center> </td> </tr> </tbody> </table><img border="0" src="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUopRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwCGRoJ&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&clientid=44382"> <br /> To unsubscribe from these mailings, you may opt out <a href="https://elink.nc.bajajallianz.co.in/vtrack?sl=dUozRDEyGWF0MUxXCQ9XDxYNUkxWBFlXWgJeWFAHDBwcUwsWD1kf&ml=BgdRDVAdVwMMUEwCGRoJ&ul=BQRUDVdVVgoAGQFOFwRaDFkPWBFRCHNRXQJbWBcFDQtOTFAMVQ9RGAYGU1NVS1QKBgJXB1AMX08CBlAHFQdTCAcEUglRUFAGDxkB&clientid=44382">here</a> 
+</body></html> 
+
+--_----------=_174280959127887234--
+

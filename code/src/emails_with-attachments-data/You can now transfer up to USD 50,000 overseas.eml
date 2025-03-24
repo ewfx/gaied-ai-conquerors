@@ -1,0 +1,191 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:c10:b0:9b:b4c0:dd5a with SMTP id ix16csp829035rbb;
+        Thu, 20 Mar 2025 03:41:25 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHqMHw+bqMwCNosWRj2tKcnvJXCqPnL7u/VcDv5vSY2tlPSb/GIDIP6mBchiH1fxaEczbQY
+X-Received: by 2002:a05:622a:5a8e:b0:474:e711:3c7f with SMTP id d75a77b69052e-47708386830mr111699801cf.43.1742467285503;
+        Thu, 20 Mar 2025 03:41:25 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742467285; cv=none;
+        d=google.com; s=arc-20240605;
+        b=A5+Xf10ErJBIIjkdZnQzQSkI/i27+r6QM33DLpZpbz/Z07S0EvEJqLM3ND5lniFAbF
+         zweogUsIwxt4lZ+tG73DRAGjiXma0rd493YJocCowLS7+02v2wsGg6sFJSqV1EOGW6eO
+         jOuGgzm/lpD14xX6h76Sp9imHnJYICjMa2dEuP18tF8Manl+xBrVOqX1izqVGVgtexf7
+         skUwLNs/P8foHtKmbhgfwEcoEkl/uhkr1+bECrZkc88ipSsz0FBZ0IRUEyeCr4p/Tqzp
+         l6FImeqT9V3P9WzUuzErJMqLHu0sk3kbSElIGNVKnh3oMuEwJdfxBgbiD+kAymuhkxIA
+         TVuA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:feedback-id:list-unsubscribe:message-id:subject
+         :reply-to:from:to:date:dkim-signature:dkim-signature;
+        bh=lgqo3nFEZsDuJhv4FKGIVrQbKHbn7TCK+NhAQcEPiJ4=;
+        fh=XkFoFqgoX09ZGStpvfMsAvVTAzcEtLyPvLQRoiCKO1E=;
+        b=YulXmoOoLgwl9QrsDYi8tuHjA4GaN0AtpZmYzQiTaFWgHqDchFx8yj7pH0BhHYbJus
+         Fft6LkIyI1Y44F8zVM3aPXeFFaanGfY7Sxt77v8WOwzPiU6SRQofx5L2dd2kA/xRGaMZ
+         8mvv5b/35jSb1CHoF0aOEqLhLn0BKhWQdptZWqg6UpxjRReDOdK9ldI0NQepZ22LR8sS
+         1UHa69G2GPsPI7iOMJCNOAe6cJY1nV7uKfNpkt4Ihck92/GNE/aNDPKDyHix8PnUbz+w
+         2xh2SE8hSIy/4vEzGcyxx29OWuVlotk+xUqewAbCvdsdcsBOmTnCehHyTJF6nrL1ytR9
+         so4w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@custcomm.icicibank.com header.s=fnc header.b="W5GogIH/";
+       dkim=pass header.i=@ncm14.com header.s=emm header.b=iPfRf2cA;
+       spf=pass (google.com: domain of campaign-icicibanksmartech-54938-707998-14583155-e=gmail.com@delivery.custcomm.icicibank.com designates 175.158.64.22 as permitted sender) smtp.mailfrom="campaign-icicibanksmartech-54938-707998-14583155-e=gmail.com@delivery.custcomm.icicibank.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=custcomm.icicibank.com
+Return-Path: <campaign-icicibanksmartech-54938-707998-14583155-e=gmail.com@delivery.custcomm.icicibank.com>
+Received: from ncmail22.custcomm.icicibank.com (ncmail22.custcomm.icicibank.com. [175.158.64.22])
+        by mx.google.com with ESMTPS id d75a77b69052e-4770c0bc88asi26923991cf.66.2025.03.20.03.41.25
+        for <rbchalisem@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 20 Mar 2025 03:41:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of campaign-icicibanksmartech-54938-707998-14583155-e=gmail.com@delivery.custcomm.icicibank.com designates 175.158.64.22 as permitted sender) client-ip=175.158.64.22;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@custcomm.icicibank.com header.s=fnc header.b="W5GogIH/";
+       dkim=pass header.i=@ncm14.com header.s=emm header.b=iPfRf2cA;
+       spf=pass (google.com: domain of campaign-icicibanksmartech-54938-707998-14583155-e=gmail.com@delivery.custcomm.icicibank.com designates 175.158.64.22 as permitted sender) smtp.mailfrom="campaign-icicibanksmartech-54938-707998-14583155-e=gmail.com@delivery.custcomm.icicibank.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=custcomm.icicibank.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=custcomm.icicibank.com; s=fnc;
+	h=content-type:mime-version:feedback-id:list-unsubscribe:message-id:subject:
+	 reply-to:from:to:from:to:subject;
+	bh=lgqo3nFEZsDuJhv4FKGIVrQbKHbn7TCK+NhAQcEPiJ4=;
+	b=W5GogIH/BlWuTni7TFdjZszlM6ayZuok4dn8IP0tvWL0iF7nJgd6fFf/T67FYOMJ0K/CnUf1Vv3so
+	 VY6mrn5AHKR/oomsbz+5CueG1sIp9+RPOdLiHAxTKD+TChpDLjfoqe+Zj/XDdnp31PVUlipE09T1yZ
+	 ghgh0KVhjs5fPUr75+6N08G4kTm5GXS5FTPlpVJUWO8LCWREw/aWBiuMLTqOYFrTjwjeWdcnY9emAE
+	 6Y6os8wiDNNa1PYp/qPcsskeudNNnsslzuqQkGskii1DqiN9BAnAOYGSqMWhL6S7mjrrwCh6aGtNSQ
+	 jwkXJstg+Jufi59+A6H9A7fGiA41/2g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=ncm14.com; s=emm;
+	h=content-type:mime-version:feedback-id:list-unsubscribe:message-id:subject:
+	 reply-to:from:to:from:to:subject;
+	bh=lgqo3nFEZsDuJhv4FKGIVrQbKHbn7TCK+NhAQcEPiJ4=;
+	b=iPfRf2cAkb4ndXHo0NiAM3fhJ24qFzOAUNOiIH0dXT8Q6HahLjTnS6PIR5iYo4toFxGvC//H6uqfn
+	 YNKAYtapsJcPAnJkHdjTV4lWDWYInlwnCnGX5mygozI6Ri6QHAIy3Xr3F6JWzEzJDQwMMafvAW8dim
+	 bLbzdRK8N2rNrIys=
+Date: Thu, 20 Mar 2025 16:11:25 +0530
+To: rbchalisem@gmail.com
+From: "ICICI Bank" <services@custcomm.icicibank.com>
+Reply-To: "ICICI Bank" <services@custcomm.icicibank.com>
+Subject: You can now transfer up to USD 50,000 overseas
+Message-ID: <812446832914583155@delivery.custcomm.icicibank.com>
+List-Unsubscribe: <mailto:icicibanksmartech-54938-707998-14583155-2d4938080cac90b078ab8a80736ebbfc@usub.custcomm.icicibank.com?subject=Unsubscribe>, <https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQECQQPAUkIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938&c=>
+Feedback-ID: 707998:54938:20250320160013:nczc
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_635ac34d1f8a473dc90229962a0ee7fa"
+
+
+
+
+--b1_635ac34d1f8a473dc90229962a0ee7fa
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Dear Ramesh Babu Chalisem,
+
+Transfer funds from your ICICI Bank NRO Account to an overseas account
+24*7 seamlessly through Internet
+Banking and the iMobile app.
+
+The per transaction limit has now increased to USD 50,000 (or its
+equivalent amount) within the overall limit per financial year,
+prescribed under the Foreign Exchange Management Act (FEMA). 
+
+Transfer now and experience a safe and secure overseas money transfer
+journey.
+
+Only use the below contacts to reach your Relationship Manager
+
+ <tel:912244400000>
+
+(Non toll-free number)
+
+Write to myrm@icicibank.com <mailto:myrm@icicibank.com>
+
+For further assistance
+Chat with us
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+ X Locate a branch
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+
+WhatsApp us
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+ X Call us
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+ (Toll-free numbers)
+
+Access your account
+Internet Banking
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+ X iMobile
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+
+Sincerely,
+Team ICICI Bank 
+
+This is a system generated e-mail. Please do not reply. 
+
+For U.K customers: The products and/or services offered by ICICI Bank
+are not authorised and regulated by UK Financial Conduct Authority
+(FCA) and Prudential Regulation Authority (PRA). In addition,
+protections offered by the UK Financial Services Compensation Scheme
+(FSCS), will not apply. Deposits of
+ICICI Bank Limited, that are payable in India are protected by the
+Deposit Insurance and Credit Guarantee Corporation (DICGC) upto a
+maximum of INR 5,00,000 for each depositor. Any disputes arising out
+of the products and/or services mentioned herein or any information
+contained herein shall be governed by the applicable Indian laws and
+regulations and subject to the exclusive jurisdiction of the courts in
+Mumbai, India. Paid up capital of ICICI Bank is 14.05 (¹ billion) as
+of March 31, 2024.
+
+For Singapore
+Customers: The products and services mentioned herein are not the
+products and services of ICICI Bank, Singapore Branch and not
+therefore regulated by the Monetary Authority of Singapore. The
+products and services are not subject to Singapore laws and are not
+eligible for or covered by Deposit Insurance Act, 2005 of Singapore. 
+
+T&Cs
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+ X Disclaimer
+<https://lnk.custcomm.icicibank.com/jtrack?d=1&id=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938>
+
+
+
+--b1_635ac34d1f8a473dc90229962a0ee7fa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+<meta content="text/html;charset=UTF-8" http-equiv="Content-Type"><title></title>
+</head>
+<body><meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" /><meta charset="UTF-8" /><style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');</style><style type="text/css">html, body { min-width:260px; min-height:100%; padding:0; Margin:0 auto; background:#FFFFFF !important; } img, a{border:0px;} a img { border:0px; } a:link {color:#97291e;} a:visited {color:#97291e;} a:active {color:#97291e;} .ReadMsgBody { width:100%; } .ExternalClass { width:100%; } .ExternalClass * { line-height:100%; } table,
+td { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; } a.maroon, a.maroon:link, a.maroon:visited, a.maroon:hover, a.maroon:focus, a.maroon:active{ color:#97291e !important; } a.whiteclr, a.whiteclr:link, a.whiteclr:visited, a.whiteclr:hover, a.whiteclr:focus, a.whiteclr:active{ color:#FFFFFF !important; } .showcent{display:none;}</style><style type="text/css">@media only screen and (max-width:530px) { @-ms-viewport { width:320px; } @viewport { width:320px; } }</style><meta content="width=device-width, initial-scale=1.0" name="viewport" /><!--[if !mso]> <!-- --><meta
+content="IE=edge" http-equiv="X-UA-Compatible" /><!--<![endif]--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>&nbsp;</td><td style="max-width:100%; width:600px;"><table border="1" bordercolor="#e3530f" cellpadding="0" cellspacing="0" style="border-collapse:collapse; border:1px solid #e3530f;" width="100%"><tbody><tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><img alt="ICICI Bank" src="https://www.assets.icicibank.com/campaigns/mailers-v3/marketing/2024/december/13/imobile-mailer/mapped/images/headercenter.jpg"
+style="display:block;" width="100%" /></td></tr><tr><td><img alt="Overseas money transfer transaction limit increased to USD 50,000" src="https://www.assets.icicibank.com/campaigns/mailers-v3/marketing/2024/december/16/nro/mapped/images/block1.jpg" style="display:block;" width="100%" /></td></tr><tr><td>&nbsp;</td></tr><tr><td style=" padding:0px 25px; text-align:justify; "><font style="font-size:14px; color:#000000; font-family:'Mulish Semibold', Arial;">Dear Ramesh Babu Chalisem,<br /><br />Transfer funds from your ICICI Bank NRO Account to an overseas account 24*7 seamlessly through Internet
+Banking and the iMobile app.<br /><br />The per transaction limit has now increased to USD 50,000 (or its equivalent amount) within the overall limit per financial year, prescribed under the Foreign Exchange Management Act (FEMA). </font></td></tr><tr><td>&nbsp;</td></tr><tr><td style="text-align:center; padding-left:25px; padding-right:25px;"><font style="font-size:16px; color:#97291e; font-family:'Mulish Extrabold', Arial;"><strong>Transfer now and experience a safe and secure overseas money transfer journey.</strong></font></td></tr><tr><td>&nbsp;</td></tr><tr><td><img alt="Benefits"
+src="https://www.assets.icicibank.com/campaigns/mailers-v3/marketing/2024/december/16/nro/mapped/images/block2.png" style="display:block;" width="100%" /></td></tr><tr><td>&nbsp;</td></tr><tr><td style="text-align:center; padding-left:25px; padding-right:25px;"><font style="font-size:16px; color:#97291e; font-family:'Mulish Extrabold', Arial;"><strong>Only use the below contacts to reach your Relationship Manager</strong></font></td></tr><tr><td align="center" style="padding:5px 25px;"><a href="tel:912244400000" target="_blank"><img alt="91-22-4440-0000" height="33"
+src="https://www.assets.icicibank.com/campaigns/mailers-v3/marketing/2024/december/13/imobile-mailer/mapped/images/call.png" style="display:inline-block;max-width:231px;" width="231" /> </a></td></tr><tr><td style="text-align:center; padding-left:25px; padding-right:25px;"><font style="font-size:14px; color:#000000; font-family:'Mulish Semibold', Arial;">(Non toll-free number)</font></td></tr><tr><td bgcolor="#FFFFFF" style=" padding:0px 25px; text-align:center; "><font style="font-size:14px; color:#000000; font-family:'Mulish Extrabold', Arial;"><strong>Write to</strong> <a class="maroon"
+href="mailto:myrm@icicibank.com" style="text-decoration:none;" target="_top"> <font color="#97291e"><strong>myrm@icicibank.com</strong></font> </a> </font></td></tr><tr><td align="left" bgcolor="#ffffff" height="20" style=" padding:0px 25px 0px 25px; "><div style="text-align:center; font-size:0; "><!--[if mso]> <table border="0" cellpadding="0" cellspacing="0" width="550" align="center" bgcolor="#ffffff" style="width:550px;"> <tr> <td style="width:48%; > <![endif]--><div style="display:inline-block; font-size:16px; text-align:left; vertical-align:top; width:48%; min-width:270px;
+max-width:100%; width:-webkit-calc(230400px - 48000%); min-width:-webkit-calc(48%); width:calc(230400px - 48000%); min-width:calc(48%);"><table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center"><table align="center" border="0" cellpadding="0" cellspacing="0" width="95%"><tbody><tr><td style="text-align:center;padding-top:15px;"><font style="font-size:16px; color:#000000; font-family:'Mulish Extrabold', Arial;"><strong>For further assistance</strong></font><br /><a class="maroon"
+href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQAAkkIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:12px; color:#97291e; font-family: 'Mulish Semibold', Arial;text-decoration:underline;" target="_blank"><font color="#97291e">Chat with us</font> </a> &#10072; <a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQAA0kIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:12px; color:#97291e; font-family: 'Mulish Semibold', Arial;
+text-decoration:underline;" target="_blank"> <font
+color="#97291e">Locate a branch</font> </a><br /><a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQAAEkIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:12px; color:#97291e; font-family: 'Mulish Semibold', Arial;text-decoration:underline;" target="_blank"><font color="#97291e">WhatsApp us</font> </a> &#10072; <a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQAAUkIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:12px;
+color:#97291e; font-family: 'Mulish Semibold',
+Arial;text-decoration:underline;" target="_blank"> <font color="#97291e">Call us</font> </a> <font style="font-size:12px; color:#000000; font-family:'Mulish Semibold', Arial;">(Toll-free numbers)</font></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]> </td> <td style="width:48%; > <![endif]--><div style="display:inline-block; font-size:16px; text-align:left; vertical-align:top; width:48%; min-width:270px; max-width:100%; width:-webkit-calc(230400px - 48000%); min-width:-webkit-calc(48%); width:calc(230400px - 48000%); min-width:calc(48%);"><table align="center"
+bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center"><table align="center" border="0" cellpadding="0" cellspacing="0" width="90%"><tbody><tr><td style="padding-top:15px;text-align:center;"><font style="font-size:16px; color:#000000; font-family:'Mulish Extrabold', Arial;"><strong>Access your account</strong></font><br /><a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQADkkIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:12px; color:#97291e; font-family:
+'Mulish Semibold',
+Arial;text-decoration:underline;" target="_blank"><font color="#97291e">Internet Banking</font> </a> &#10072; <a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQAD0kIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:12px; color:#97291e; font-family: 'Mulish Semibold', Arial;text-decoration:underline;" target="_blank"> <font color="#97291e">iMobile</font> </a></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso]> </td> </tr> </table> <![endif]--></div></td></tr><tr><td
+height="20">&nbsp;</td></tr><tr><td
+style="padding:0px 25px; text-align:justify;"><font style="font-size:14px; color:#000000; font-family: 'Mulish Semibold', Arial;">Sincerely,<br />Team ICICI Bank </font></td></tr><tr><td height="12">&nbsp;</td></tr><tr><td bgcolor="#e3530f" height="10">&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td style="max-width:100%; width:600px; padding:5px 0;"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center" style="padding:10px;"><font style="font-size:13px; color:#000000; font-family:'Mulish Semibold',
+Arial;">This is a system generated e-mail. Please do not reply. </font></td></tr><tr><td align="left" style="padding:5px; text-align: justify;"><font style="font-size:12px; color:#000000; font-family:'Mulish Semibold', Arial;"><span style="font-family: 'Mulish', Arial;"><strong>For U.K customers:</strong></span> The products and/or services offered by ICICI Bank are not authorised and regulated by UK Financial Conduct Authority (FCA) and Prudential Regulation Authority (PRA). In addition, protections offered by the UK Financial Services Compensation Scheme (FSCS), will not apply. Deposits of
+ICICI Bank Limited, that are payable in India are protected by the Deposit Insurance and Credit Guarantee Corporation (DICGC) upto a maximum of INR 5,00,000 for each depositor. Any disputes arising out of the products and/or services mentioned herein or any information contained herein shall be governed by the applicable Indian laws and regulations and subject to the exclusive jurisdiction of the courts in Mumbai, India. Paid up capital of ICICI Bank is 14.05 (&#8377; billion) as of March 31, 2024.<br /><br /><span style="font-family: 'Mulish', Arial;"><strong>For Singapore
+Customers:</strong></span> The products and services mentioned herein are not the products and services of ICICI Bank, Singapore Branch and not therefore regulated by the Monetary Authority of Singapore. The products and services are not subject to Singapore laws and are not eligible for or covered by Deposit Insurance Act, 2005 of Singapore. </font></td></tr><tr><td style="padding:0px 25px;text-align:center;"><a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQPBkkIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938' 
+style="font-size:13px; color:#97291e;
+font-family: 'Mulish Semibold', Arial;" target="_blank"><font color="#97291e">T&amp;Cs </font> </a> &#10072; <a class="maroon" href='https://lnk.custcomm.icicibank.com/jtrack?d=1&id=K04AVQQHCgQPB0kIAFICVF8OXBpVXF0eV0ZKEVQJD18aCAdcUg1SAlZYHFpWWkQ=UFFQAAJXUFRIRlVWXQNdWxEGX3ACXlNRWBlVWlU=&client=54938'  style="font-size:13px; color:#97291e; font-family: 'Mulish Semibold', Arial;" target="_blank"> <font color="#97291e">Disclaimer</font> </a></td></tr><tr><td>&nbsp;</td></tr></tbody></table></td><td>&nbsp;</td></tr></tbody></table><br/><div></div><img border="0"
+src="https://lnk.custcomm.icicibank.com/jtrack?d=1&m=707998&eu=UwIBUQYKCwUCA0lKUgZaAgpeFwNUclFdVVpVS1QJDw==&u=2d4938080cac90b078ab8a80736ebbfc&client=54938&c=0000" ></body>
+</html>
+
+
+
+--b1_635ac34d1f8a473dc90229962a0ee7fa--
+

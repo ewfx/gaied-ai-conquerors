@@ -1,0 +1,108 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:9585:b0:9b:b4c0:dd5a with SMTP id gs5csp678344rbb;
+        Wed, 5 Mar 2025 02:00:57 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGcVSEtljh+jYzaIbexsYdOxKbjq+AX00ZzFpwjb3orWHMpkZc4pe4xE7fsKoYBxiZI5yYH
+X-Received: by 2002:a05:6a00:3e09:b0:736:62a8:e52d with SMTP id d2e1a72fcca58-73682be1b01mr4464659b3a.12.1741168857140;
+        Wed, 05 Mar 2025 02:00:57 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741168857; cv=none;
+        d=google.com; s=arc-20240605;
+        b=L+RiZiksuI7WTtvZqRyS+G2DDj0ZSw9SOm6fPsL81MGg140aTbgrtPciP1GwfolT6c
+         wU00pjOz6SNmZOgYBrqRNins4scFQo6U/ClUtwZJ4eqpejkBN7B89Xhcjtsx8l2rbB0J
+         peG3hCO7pk6TvclrjpDUh+oZHvGHWmpsChV4847g5GRKPTqvFGEMeq7v00vnQJC2vGs0
+         ANcSlpgeQQZzDg+3yxB2PV+Rv/sncXfewN2CbDR9q2jNZEkGrhUv/IdnZHnCVPbO7ALw
+         jBnbCrHwUzm3VZqyg0b6k2/PgQRNzmyrNN2rxCpjOy2SKCoG9wWqXa19MARII7SGV/JE
+         hruQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:list-unsubscribe-post:feedback-id:list-unsubscribe
+         :content-transfer-encoding:mime-version:message-id:subject:from:to
+         :dkim-signature:dkim-signature;
+        bh=h6JxbNxX/4QcIA8hoNWbWpla7gEQ4ltsskNgCCDb7Qg=;
+        fh=roqnsWlsGR8/pkf5dcTZR56+UOvOrhWlJduTbm1tglQ=;
+        b=Q0+c+13nJze3BhmwkBeWFA6d6nfvBdG8g8cFkwuLzgvcVCKHAp+25CRsaGngX+o6As
+         i4xXlU/G0Mh77WD1OOi8W1DcC+JeFY3tiqEYAoK97tHraF/zn4pId3PcKpUD8IKvfad9
+         suyg+hs5P4xZDj/JP1D+wI1hEmO+t6GAg5uY3NlrgQjOVM6gmKhWX+d4NnNhd3qp88yJ
+         7JQuuSSgCGPtk/nS5UCZC4+6Cjd/9a43NAaF8Mqn1t9AN3FWTZc4hQp1nQlGhBsLjEtR
+         kucUtWB0NN5MazLlD4TfYgTpFzcBbi/yvd5yPj75T3M+lUQIRFtz5wCRDxzykXPbH0XS
+         El6Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@phonepe.com header.s=pepipost header.b=HwjGdCpV;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=X3LI8pae;
+       spf=pass (google.com: domain of 17411130884418387-130915-1-gmail.com@delivery.mailer.phonepe.com designates 175.158.68.103 as permitted sender) smtp.mailfrom=17411130884418387-130915-1-gmail.com@delivery.mailer.phonepe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=phonepe.com
+Return-Path: <17411130884418387-130915-1-gmail.com@delivery.mailer.phonepe.com>
+Received: from mta-68.103.etransmail.com (mta-68.103.etransmail.com. [175.158.68.103])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-7363145b5b2si14654852b3a.225.2025.03.05.02.00.56
+        for <rbchalisem@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 05 Mar 2025 02:00:57 -0800 (PST)
+Received-SPF: pass (google.com: domain of 17411130884418387-130915-1-gmail.com@delivery.mailer.phonepe.com designates 175.158.68.103 as permitted sender) client-ip=175.158.68.103;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@phonepe.com header.s=pepipost header.b=HwjGdCpV;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=X3LI8pae;
+       spf=pass (google.com: domain of 17411130884418387-130915-1-gmail.com@delivery.mailer.phonepe.com designates 175.158.68.103 as permitted sender) smtp.mailfrom=17411130884418387-130915-1-gmail.com@delivery.mailer.phonepe.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=phonepe.com
+DKIM-Signature: a=rsa-sha256; bh=h6JxbNxX/4QcIA8hoNWbWpla7gEQ4ltsskNgCCDb7Qg=;
+ c=relaxed/relaxed; d=phonepe.com;
+ h=DKIM-Signature:To:From:Subject:Message-Id:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:Feedback-Id:X-Dkim-Options:X-Fncid:X-Injtime:X-Traffic-Type:X-Mta-Source:X-Mailer:List-Unsubscribe-Post:Date;
+ s=pepipost; t=1741168831; v=1;
+ b=HwjGdCpVy4kW5XuA+feSC9LfS4u1zf2wAc5o3FOQJb7F6vkZJ3VP6ytl2SzXWYS0V/cAzl3T
+ osvs2GeAzKfbDVghpstenjoihBt9pX6ljMIjJTCYiBnNWKrwrBOzrzORz6jH98KO3ID1na6aLCl
+ JpnEFHqlcbdL8pyI80mdg2sg=
+DKIM-Signature: a=rsa-sha256; bh=h6JxbNxX/4QcIA8hoNWbWpla7gEQ4ltsskNgCCDb7Qg=;
+ c=relaxed/relaxed; d=env.etransmail.com;
+ h=To:From:Subject:Message-Id:MIME-Version:Content-Type:Content-Transfer-Encoding:List-Unsubscribe:Feedback-Id:X-Dkim-Options:X-Fncid:X-Injtime:X-Traffic-Type:X-Mta-Source:X-Mailer:List-Unsubscribe-Post:Date;
+ s=fnc; t=1741168831; v=1;
+ b=X3LI8pael58JlwLedOMmfEeiRmoOyMgsy3blPMY+VjcVia1t4TjcyZ1GdMsQ3TgwFlTlXVb+
+ gMRyIVWteiEe91dzFc+scBVNgP7hOqFt/+F6C7XVf4L4x7liGnYRPYjJ2IV6N/DZY5YYJMQzwUS
+ sazmtvZnpNkYr+mZ05IX1Now=
+To: <rbchalisem@gmail.com>
+From: =?UTF-8?B?UGhvbmVQZQ==?= <noreply@phonepe.com>
+Subject: =?UTF-8?B?RmlqaSBvciBUb2t5bywgZ2V0IGluc3VyZWQgYmVmb3JlIHlvdSBnbyE=?=
+Message-Id: <dvtawf17411130884418387@phonepe.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_1741168829887691089"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://unsub-api.netcorecloud.net/YHNMJN?id=130915=NBoHVQpTAQQFHRRFEURFGRRCFUQSQURGEBhBQRERREVBRhdEGUMYFRBBFEURREUZFFJJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQRdfTklCCkoWWhhREV1LXwERWlsQUAdeDhECHlYEFR5oLCssLHlbUAdEQwM=>, <mailto:17411130884418387-130915-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+Feedback-Id: 130915:202503:1:falconide
+X-Dkim-Options: s=pepipost;d=phonepe.com
+X-Fncid: 130915-17411130884418387-0
+X-Injtime: 1741168829
+X-Traffic-Type: 130915-2
+X-Mta-Source: phonepeprodpromo_130915
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Date: Wed, 5 Mar 2025 15:30:30 +0530
+
+This is a multi-part message in MIME format.
+
+--_----------=_1741168829887691089
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset="utf-8"
+
+Secure your safar @ the PhonePe Travel Insurance Fest. About us  Policy  Terms    If you do not wish to receive any further communications, please click here  
+
+--_----------=_1741168829887691089
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="PhonePe.com revolutionizing payments by building India's Payments App to provide a cashless and a seamless payment experience"><meta name="keywords" content="Phone pe, Phonepe, UPI, Cashless payments, India"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="PhonePe India's Payments APP - PhonePe.com"><meta property="og:url" content="https://www.phonepe.com/"><meta 
+property="og:description" content="PhonePe.com revolutionizing payments by building India's Payments App to provide a cashless and a seamless payment experience"><title>PhonePe India's Payments App</title></head><body style="margin:0;padding:0;background-color:#ffffff;margin-bottom:0"><span style="display:none !important">Secure your safar @ the PhonePe Travel Insurance Fest.</span><table style="border-collapse:collapse;table-layout:fixed;margin:0 auto;border-spacing:0;padding:0;height:100% !important;width:100% !important;font-weight:normal;color:#3e4152;font-family:Roboto, Arial, Helvetica, sans-serif;font-size:14px;line-height:1.4" 
+border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td id="lpBgColor-table" data-pincode-analytics="false" style="background:#ffffff;padding:16px 0"><table style="max-width:600px;margin:auto;border-spacing:0;overflow:hidden;border:1px solid #5f259f;padding:0px;border-radius:16px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="border-collapse:collapse"><table style="margin:auto;border-spacing:0;background:white;overflow:hidden;border-radius:12px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="center" 
+valign="middle" style="border-collapse:collapse;padding:1rem 2rem;background:#5f259f"><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHQNcU10EDABRUFBXUlUDAggCWAJXV1FVUgRUCVAJBAgDVVFTXFZYVwBJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBsQUQ5KCAYcUQ==" target="_blank" rel="noreferrer" style="text-decoration:none;color:#ffffff;outline:none;border:none" data-key="rdjxibza"><img src="http://images.phonepe.com/images/emailers/96/96/phonepe_logo_invers.png" title="PhonePe" 
+alt="PhonePe" style="margin:auto;text-align:center;border:0;outline:none;text-decoration:none" align="middle" border="0" height="40"></a></td></tr><tr><td><img src="https://www.phonepe.com/apollo/emailers/2025/march/03/FijiorTokyogetinsuredbeforeyougo/images/travel-insurance-3_01.png" border="0" style="width:100%;display:block"></td></tr><tr><td><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHQ0AAlJSXVIDVwABUFxRBl1UUgJSVFcCVgcACVILAgdZDFEEVFUNUFVJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBsDWAwLVFcHQQ==" 
+data-key="amh953aq"><img src="https://www.phonepe.com/apollo/emailers/2025/march/03/FijiorTokyogetinsuredbeforeyougo/images/travel-insurance-3_02.png" border="0" style="width:100%;display:block"></a></td></tr><tr><td><img src="https://www.phonepe.com/apollo/emailers/2025/march/03/FijiorTokyogetinsuredbeforeyougo/images/travel-insurance-3_03.png" border="0" style="width:100%;display:block"></td></tr><tr><td><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHVBTAAYGWAVRVwBTV1NQVQpYAAEGBQEDVgIGW1oMUQRTVlYAXQEAAABJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBtSDFYKAhUeBg==" 
+data-key="0928cqx6"><img src="https://www.phonepe.com/apollo/emailers/2025/march/03/FijiorTokyogetinsuredbeforeyougo/images/travel-insurance-3_04.png" border="0" style="width:100%;display:block"></a></td></tr><tr><td><img src="https://www.phonepe.com/apollo/emailers/2025/march/03/FijiorTokyogetinsuredbeforeyougo/images/travel-insurance-3_05.png" border="0" style="width:100%;display:block"></td></tr><tr><td><img src="https://www.phonepe.com/apollo/emailers/2025/march/03/FijiorTokyogetinsuredbeforeyougo/images/travel-insurance-3_06.png" border="0" style="width:100%;display:block"></td></tr><tr><td 
+style="border-collapse:collapse;padding:16px 32px;border-top:1px solid #eaeaed;font-family:Roboto, Arial, Helvetica, sans-serif;font-size:12px;background:#ffffff"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" valign="middle" style="border-collapse:collapse;font-weight:normal"><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHQNSBFNXWANSU1AFAgUFAQ0DU1AGB1QEXlUFXFBdAQJVVgQAVFUMUVJJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBsHUBBYDw8JWg==" 
+style="color:#5f259f;font-size:12px;padding:4px;height:24px;display:inline-block;text-transform:capitalize;outline:none;border:none" target="_blank" rel="noreferrer" data-key="eetjnkoj"> About us </a><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHQQBAwFRCQcHDVRRAgdWCQFYAFQJVAACXwBRDlVaB1ZYBgFQXFINBFZJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBsLBAVQVlYPWQ==" style="color:#5f259f;font-size:12px;padding:4px;height:24px;display:inline-block;text-transform:capitalize;outline:none;border:none" 
+target="_blank" rel="noreferrer" data-key="i1ab72ii"> Policy </a><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHQxTVFVRXAJaBFUFWVBSCAsHBwIBVlJVAgIAWlIADQlVAQACB1BcDFNJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBsQBFxTUFESQw==" style="color:#5f259f;font-size:12px;padding:4px;height:24px;display:inline-block;text-transform:capitalize;outline:none;border:none" target="_blank" rel="noreferrer" data-key="r18a15ts"> Terms </a></td><td width="16" align="left" 
+valign="middle" style="border-collapse:collapse">&nbsp;</td><td align="right" valign="middle" style="border-collapse:collapse"><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td style="border-collapse:collapse"><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHVFXVQVXXFZWDQEFVFcCAVtQUFRQBwZZAAFdDFYBV1JTV11QBlMOV1ZJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBtbQFdBCwBSBw==" target="_blank" rel="noreferrer" style="font-size:0;border:none;outline:none;text-decoration:none;margin-right:4px" 
+data-key="9u3sjd47"><img width="24" src="http://images.phonepe.com/images/emailers/48/48/ic_social_facebook.png" title="Facebook" alt="Facebook"> </a><a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHVJSA1EAAAJaAAcCBFYCAAECAAUCXVZWB1IGCgALUVFZAV0GBlZfUgRJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpACVsLVEoVXBsUDBMHB1wEAQ==" target="_blank" rel="noreferrer" style="font-size:0;border:none;outline:none;text-decoration:none;margin-right:4px" data-key="v9w5f8b1"><img width="24" 
+src="http://images.phonepe.com/images/emailers/48/48/ic_social_twitter.png" title="Twitter" alt="Twitter"> </a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><div style="font-weight:normal;color:#3e4152;font-family:Roboto, Arial, Helvetica, sans-serif;font-size:0.7250rem;line-height:1.4;padding:0 2rem 2rem;text-align:center">If you do not wish to receive any further communications, please <a href="http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=IhoHVQpTAQQFHQJTAgYHC1FbDQdWUV1UCVkFUwQGBQADAA4GXVdcBgJSDFUCUVcMB1NJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=&fl=CRJDFEpZFxpdAF0JVBZLSVwNWwFCBEoFX1VOEkRTFwYTD0cQUAxWGlkPUABJSg1NWQ4=&ext=YXBwVHlwZT1DT05TVU1FUiZyZWNlaXZlcj1SelIwV21wNU5GWjVkRWxOU1RCRFVGcDVTVmhCYkdoM1JtZGhSM00wVFdGT1JEaGhVM1owZEN0MEsyOU5TRFZyY3preWVIbHNhVUYwU0hOUVRrOVNWbHBUZEN0bVpteEVPSEJ5WWtKa1ZucEpkVlJqTUdjOVBRPT0mcmVxdWVzdElkPU5VOTBWME4wTWtWU01Vc3lTbkJTWW05V2RtTTRlVFo1T0dSaFREWlJNV2h1TlVzMWNYVkxRMmxGV210SmQxVk5lVk1yYzNCQ04xaHBaelJRU2tOTVJ6aEpabTU0ZVU1dmIyRjFWazFTTkROU2NuUkVNV1pySzJoaGVrSTNOQ3MwV0VwalQwVlhiVWtyYnpnOQ==" 
+style="color:#5f259f" target="_blank">click here</a></div><p>&nbsp;<br></p> 
+<img src='http://distribution.mailer.phonepe.com/JUYZXESVWHF?id=130915=LhoHVQpTAQQFHRRFEURFGRRCFUQSQURGEBhBQRERREVBRhdEGUMYFRBBFEURREUZFFJJFlACDAdcURIEXHEDCAAPW0paDFVJAVYAVABVVgkMWgFQA1lXXgdECRVFQV5KTgJeF00RUVdFFV0KX0oIWF0OUBYcEQwJXl0RBB9SCwhOLGI9Yzt9ZmY2fCMODQFFQlE=' alt='' /></body></html>
+
+--_----------=_1741168829887691089--
+

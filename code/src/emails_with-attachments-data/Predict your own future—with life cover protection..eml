@@ -1,0 +1,1130 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:c10:b0:9b:b4c0:dd5a with SMTP id ix16csp715896rbb;
+        Wed, 19 Mar 2025 23:00:11 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH6H04g3OE0qSlpLE7mGE8AVBK9wLHcMRgDsoKWOv7j+hVMvXmvD7i6eYcYQ7LZ1TsEaxkN
+X-Received: by 2002:a17:902:e549:b0:223:37b8:c213 with SMTP id d9443c01a7336-2265eeaf5c8mr27667065ad.52.1742450410892;
+        Wed, 19 Mar 2025 23:00:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742450410; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Azhysk4QlCVhpj6tyKFUou+o2OPIzYqd7mLCQMHMtELWw4obQXN0vd8pQrPzFPHJHp
+         Zy7zksZmEEnWQduQwMRSDNCRluj5v+ori3ATByMuthARxgfmE4L6gaPepN3BSNBbwd29
+         ggt0t6E557sE90gzerNEGtvnLOI9rqw39nHz8740SldAP3JJ6TuIrcAX+XnF1Vrtu0Bh
+         hL3VRwhik/qBvm3+olfjGSHNTWrcVMcvp3sWdLSp/kAK3yHJzSiGZBj1IYmGlsZyYPyv
+         A61Viw1VL7O+7AGzi3OEt/QRJ67jk2xIyCu8YyZWDysNiZsZoocEYmVijh9WXfCQvcwQ
+         b1nw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:message-id:mime-version:reply-to:to:date:subject
+         :from:dkim-signature;
+        bh=M0buFYHaJa1svySf8WymMSL9ir5xIUgCG0Y/C+Rozmg=;
+        fh=roqnsWlsGR8/pkf5dcTZR56+UOvOrhWlJduTbm1tglQ=;
+        b=MGUOROQnJ1QqKWDCYFsNnIi5pRC8oLX4M4Wf2BT5NxOBHlv0HHgdILnpERhiuXdaYg
+         40riLnIVOXNjPE47QEhfakhyyR04fcgAF3MeNND+Vp84RPccCn/HneU2eIlR9ol7nwWw
+         sMMO9LoE1ehgNIs/N0gkid56S8lPVsdVAsWA81cUAvhqyCA3DufX4DS4AgIVDQCnfdvM
+         WGgEP1Es2A9qECPousHmqMvCwbN01itwCvfYMAeuKBpE6ilqRtTox4cPLDQDTBns3qXw
+         YjZsnuB4v+yyRP9tJQEMZPUbHLNQyvi0IVem/9EBC9jKp1RIkODFEGEX5CyVdIj7hrhq
+         yS0A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@online.hdfclife.com header.s=hdfclife header.b=aD2Nf6EZ;
+       spf=pass (google.com: domain of bounce@online.hdfclife.com designates 66.117.25.198 as permitted sender) smtp.mailfrom=bounce@online.hdfclife.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=online.hdfclife.com
+Return-Path: <bounce@online.hdfclife.com>
+Received: from r198.online.hdfclife.com (r198.online.hdfclife.com. [66.117.25.198])
+        by mx.google.com with ESMTPS id d9443c01a7336-225c6b6eb7fsi190984385ad.421.2025.03.19.23.00.10
+        for <rbchalisem@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 19 Mar 2025 23:00:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce@online.hdfclife.com designates 66.117.25.198 as permitted sender) client-ip=66.117.25.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@online.hdfclife.com header.s=hdfclife header.b=aD2Nf6EZ;
+       spf=pass (google.com: domain of bounce@online.hdfclife.com designates 66.117.25.198 as permitted sender) smtp.mailfrom=bounce@online.hdfclife.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=online.hdfclife.com
+Return-Path: <bounce@online.hdfclife.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=online.hdfclife.com;
+	s=hdfclife; t=1742450403;
+	bh=M0buFYHaJa1svySf8WymMSL9ir5xIUgCG0Y/C+Rozmg=;
+	h=From:Subject:Date:To:MIME-Version:Message-ID:List-Unsubscribe:
+	 Content-Type;
+	b=aD2Nf6EZc3b7M0TPk0ugJ7i5wKRqYpJmCJLRTt1MRoHhjh3vkq8tXgejRFvBg9Ple
+	 FEUHZhPaDu6jN0MsrOd1v5FUHtnB5NOH7OkEpSlu46I7VmQTDHWBbwwB/Urw/tYrcb
+	 FjvVQ9Uil/4pzj2SwJg/X+RkCuH4GHw842kLH8revw84nyehne/+7Vf/1IfCoT+WnB
+	 rU39Gyv3AEc/wqwKOHlLqVs25tSe8yuwXtghuD5Y/B4DxaQO5FQnheR40Ddgrn40Rq
+	 SASt5cN5nUzvEH8krbHcRWyYdGdKgnC3vs4ZONtprTl4cnvnC4Vb3KP5DcmrkF8d2k
+	 5vkJAzhOPbwRQ==
+X-MSFBL: aW3ym70ml+xvVwDwCWHIz/9DH4vZW63gn0kweKcZFoQ=|eyJnIjoicHJvZC5vbmx
+	pbmUuY29tX2YyMzcwNTQ5LTcwNjAtNGZjNS1hMzEyLWVkODQ1MzFhOGYwYiIsImI
+	iOiJoZGZjbGlmZV82Ni4xMTcuMjUuMTk4X3Byb2Qub25saW5lLmNvbV9mMjM3MDU
+	0OS03MDYwLTRmYzUtYTMxMi1lZDg0NTMxYThmMGIiLCJyY3B0X21ldGEiOnsgIml
+	uIjogImhkZmNsaWZfbWlkX3Byb2Q0IiwgInIiOiAicmJjaGFsaXNlbUBnbWFpbC5
+	jb20iLCAibSI6ICItMjEyMjIxMDI0OSIsICJkIjogIjUzNTk0NTk5IiwgImkiOiA
+	iIiB9LCJyIjoicmJjaGFsaXNlbUBnbWFpbC5jb20ifQ==
+Received: from [13.234.74.12] ([13.234.74.12:48051] helo=r198.online.hdfclife.com)
+	by sgp3-prod1-mta-i-03e132f3728f9d4b9 (envelope-from <bounce@online.hdfclife.com>)
+	(ecelerity 4.4.1.20033 r(msys-ecelerity:tags/4.4.1.0^0)) with ESMTP
+	id A2/3B-31511-2EEABD76; Thu, 20 Mar 2025 06:00:03 +0000
+From: "HDFC Life" <no-reply@online.hdfclife.com>
+Subject: =?windows-1252?Q?Predict_your_own_future=97with_life_cover_prote?=
+ =?windows-1252?Q?ction.?=
+Date: Thu, 20 Mar 2025 11:30:01 +0530
+To: <rbchalisem@gmail.com>
+Reply-To: "HDFC Life" <bounce@online.hdfclife.com>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 6.7.0
+Message-ID: <NM6A11809170331C9E7hdfclif_mid_prod4@online.hdfclife.com>
+List-Unsubscribe: <mailto:bounce@reminders.hdfclife.com?subject=unsubscribe%3CNM6A11809170331C9E7hdfclif_mid_prod4@online.hdfclife.com%3E>
+Content-Type: multipart/alternative;
+	charset="windows-1252";
+	boundary="----=_NextPart_872_D9655173.D9655173"
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_872_D9655173.D9655173
+Content-Type: text/plain;
+	charset="windows-1252"
+Content-Transfer-Encoding: 8bit
+
+HDFC Life Sanchay Plus will give you Guaranteed benefits as a lump sum or as regular income 
+	
+To Prevent mailers from going into the junk folder, Please add HDFC Life to your safe senders list 	
+----------------------------------------------------------------------------
+To view this message in HTML format, click here:
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,65298d&e=cDE9JTQwaXF3bkZQcWJqQ2JpQzV5UE1xVE1lSW9XcTFWODdVM0s1SFNjZWlReHFhbyUzRA&s=lSDa_b4Qw8mOhIigx1PCGGgw3VVaW3TsEypGyUGc8kw 
+or paste this link in a Web browser
+----------------------------------------------------------------------------	
+
+	
+  	
+	
+
+  	 http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a06 	  	 http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a07 	  	
+	
+  	
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a08 	
+
+  	
+  	
+
+Enjoy a comfortable retirement 
+with a lifelong income plan 	
+	
+
+With HDFC  Life Sanchay  Plus , secure your retirement. 
+Opt for the Life Long Income Option for a sunny financial 
+future coupled with tax-saving benefits. 	
+	
+  	
+	
+	  	
+	
+
+Range of Benefits 	
+	
+	
+
+	
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a09 		Tax benefits 1 	
+
+	
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a0a 		Guaranteed 
+lifelong income 2 	
+		
+	
+
+  	
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a0b 	
+	
+
+  	
+
+1. As per Income Tax, 1961. Tax benefits are subject to changes in tax laws. 
+2. An additional income is payable in case of higher premium amount, please refer to the Enhanced Benefit 
+for High Premium Policies 
+
+HDFC Life Insurance Company Limited (“HDFC Life”).  CIN: L65110MH2000PLC128245. IRDAI 
+Registration No. 101. 
+
+Registered Office:  13th Floor, Lodha Excelus, Apollo Mills Compound, N. M. Joshi Marg, Mahalaxmi, 
+Mumbai - 400 011. Email:  mailto:service@hdfclife.com service@hdfclife.com , Tel. No:  tel:18602679999 1860 267 9999  (Mon-Sat 10 am to 7 pm) 
+Local charges apply. Do NOT prefix any country code. e.g. +91 or 00. Website:  www.hdfclife.com www.hdfclife.com 
+
+The name / letters 'HDFC' in the name/logo of HDFC Life Insurance Company Limited (HDFC Life) 
+belongs to HDFC Bank Limited and is used by HDFC Life under licence from HDFC Bank Limited. 
+
+HDFC Life Sanchay Plus (UIN: 101N134V19) is a non-participating, non-linked savings insurance plan. 
+Life Insurance Coverage is available in this product. 
+
+For more details on risk factors, associated terms and conditions and exclusions, please read sales brochure 
+carefully before concluding a sale. ARN: ED/12/23/6740 	
+  	
+	
+	
+
+  	
+BEWARE OF SPURIOUS PHONE CALLS AND FICTICIOUS/FRAUDULENT OFFERS 	
+  	
+• IRDAI is not involved in activities like selling insurance policies, announcing bonus or investment 
+of premiums. Public receiving such phone calls are requested to lodge a police complaint. 	
+  	
+	
+  	
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a0c 	
+	
+You are receiving this message because you have been in contact with HDFC Life or an affiliated company. To no longer receive messages from HDFC Life 
+click here:
+ http://t4.online.hdfclife.com/r/?id=t8181a437,947b906,652a0d&e=cDE9JTQwRiUyQkVyY3NBN3BGSWRTWVRFa1g3dGd3JTNEJTNE&s=zyRvNtm9QpVkY-pvQZSjW1GpL5QghHddKa84olB4ZKA 
+
+------=_NextPart_872_D9655173.D9655173
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+" />
+
+    <title>HDFC Life Sanchay Plus</title>
+
+    <style type=3D"text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        background: #ffffff;
+        font-family: Verdana, Tahoma, sans-serif Arial, sans-serif;
+      }
+      .a6T {
+        cursor: default !important;
+        outline: 0;
+      }
+      .a6S {
+        display: default !important;
+      }
+      .gt a {
+        cursor: default !important;
+      }
+      #outlook a {
+        padding: 0;
+      }
+      img {
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+      a img {
+        border: none;
+      }
+      .applelinks a {
+        color: #222222;
+        text-decoration: none;
+      }
+      img[class^=3D"Emoji"] {
+        width: 10px !important;
+        height: 10px !important;
+        display: inline !important;
+      }
+      @media screen and (max-width: 320px) {
+        body {
+          -ms-text-size-adjust: 100%;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        table[class=3D"emailwrapto100pc"],
+        img[class=3D"emailwrapto100pc"] {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        table[class=3D"emailnomob"],
+        td[class=3D"emailnomob"],
+        img[class=3D"emailnomob"],
+        span[class=3D"emailnomob"] {
+          display: none !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        td[class=3D"emailcolsplit"] {
+          width: 100% !important;
+          float: left !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        table[class=3D"link_box"],
+        td[class=3D"link_box"],
+        img[class=3D"link_box"],
+        span[class=3D"link_box"] {
+          display: block !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        td[class=3D"emailbodytext"],
+        a[class=3D"emailbodytext"] {
+          font-size: 1em !important;
+          line-height: 26px !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        span[class=3D"emailbodytext"],
+        a[class=3D"emailbodytext"] {
+          font-size: 1em !important;
+          line-height: 26px !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        td[class=3D"emailfootertext"],
+        span[class=3D"emailfootertext"],
+        a[class=3D"emailfootertext"] {
+          font-size: 1em !important;
+          line-height: 22px !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        td[class=3D"emailtext"],
+        span[class=3D"emailtext"] {
+          font-size: 1em !important;
+          line-height: 26px !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        span[class=3D"easy_txt_hd_mo"] {
+          font-size: 1.2em !important;
+          line-height: 26px !important;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        span[class=3D"pricing_tab_hd_mo"] {
+          font-size: 1.2em !important;
+          line-height: 26px !important;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .mobile-display-off {
+          display: none;
+        }
+        .mobile-td {
+          font-size: 16px !important;
+        }
+        .td-header {
+          padding-bottom: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body style=3D"margin: 0; padding: 0; background: #fff">
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+      <tbody>
+        <span class=3D"preheader" style=3D"color: transparent; display: non=
+e; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; ms=
+o-hide: all; visibility: hidden; width: 0;">HDFC Life Sanchay Plus will giv=
+e you Guaranteed benefits as a lump sum or as regular income</span>
+<tr>
+  
+<tr>
+
+<td style=3D"font-family:Verdana; font-size:9px; line-height:18px; color:#4=
+14141; text-align:center;" class=3D"font12">To Prevent mailers from going i=
+nto the junk folder, Please add HDFC Life to your safe senders list</td>
+          
+</tr>
+     <td>
+<p align=3Dcenter>
+  <font style=3D"font-family: Verdana, Arial; font-size: 10px">
+  If you are unable to view this message correctly, 
+  <a href=3D"http://t4.online.hdfclife.com/r/=3Fid=3Dh8181a437,947b906,6529=
+84&e=3DcDE9JTQwaXF3bkZQcWJqQ2JpQzV5UE1xVE1lSW9XcTFWODdVM0s1SFNjZWlReHFhbyUz=
+RA&s=3DTo3_-DxdF4uXMicRopfx--7xX5Rz3s6JpEEUc6UvvEE" _label=3D"Mirror Page" =
+_type=3D"mirrorPage">click here</a>
+  </font>
+</p> </td>
+</tr>
+        <tr>
+          <td align=3D"center" valign=3D"top">
+            <table width=3D"602" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0">
+              <tbody>
+                <tr>
+                  <td
+                    align=3D"center"
+                    style=3D"
+                      border-left: 1px solid #cdcdcd;
+                      border-top: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                    "
+                  >
+                    <table
+                      width=3D"100%"
+                      border=3D"0"
+                      cellspacing=3D"0"
+                      cellpadding=3D"0"
+                    >
+                      <tbody>
+                        <tr></tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style=3D"
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+
+                      background: #fff;
+                    "
+                  >
+                    <table
+                      width=3D"100%"
+                      border=3D"0"
+                      cellspacing=3D"0"
+                      cellpadding=3D"0"
+                    >
+                      <tbody>
+                        <tr style=3D"border-top: 1px solid #000">
+                          <td width=3D"45">&nbsp;</td>
+                          <td width=3D"150" valign=3D"middle">
+                          <a href=3D"http://t4.online.hdfclife.com/r/=3Fid=
+=3Dh8181a437,947b906,652985" target=3D"_blank"><img
+                              src=3D"http://res4.online.hdfclife.com/res/im=
+g/58D37968CE6080DEB82A0052BA06B0CD.png"
+                              alt=3D"HDFC Life Logo"
+                              width=3D"100%"
+                              style=3D"display: block; outline: none"
+                            /></a>
+                          </td>
+                          <td width=3D"100">&nbsp;</td>
+                          <td width=3D"250" valign=3D"middle">
+                          <a href=3D"http://t4.online.hdfclife.com/r/=3Fid=
+=3Dh8181a437,947b906,652986" target=3D"_blank"><img
+                              src=3D"http://res4.online.hdfclife.com/res/im=
+g/0FE3BE603EA681B0169305A525F8E7CB.png"
+                              alt=3D"Sanchay-Plus-Plan-logo"
+                              width=3D"100%"
+                              style=3D"display: block; outline: none"
+                            /></a>
+                          </td>
+                          <td width=3D"45">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    height=3D"15"
+                    style=3D"
+                      font-size: 0;
+                      line-height: 15px;
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                      background: #fff;
+                    "
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    align=3D"center"
+                    style=3D"
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                      background-color: #fff;
+                    "
+                  >
+                    <a href=3D"http://t4.online.hdfclife.com/r/=3Fid=3Dh818=
+1a437,947b906,652987" target=3D"_blank"><img
+                        src=3D"http://res4.online.hdfclife.com/res/img/E053=
+19B3923727AFE62D86DFDA21E9E7.png"
+                        alt=3D"banner"
+                        width=3D"100%"
+                        style=3D"outline: none; display: block"
+                        border=3D"0"
+                    /></a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    style=3D"
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                      background: #fff;
+                    "
+                  >
+                    <table
+                      width=3D"100%"
+                      border=3D"0"
+                      cellspacing=3D"0"
+                      cellpadding=3D"0"
+                    >
+                      <tbody>
+                        <tr>
+                          <td width=3D"10">&nbsp;</td>
+                          <td valign=3D"top" align=3D"left">
+                            <table
+                              width=3D"100%"
+                              border=3D"0"
+                              cellspacing=3D"0"
+                              cellpadding=3D"0"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    height=3D"10"
+                                    style=3D"font-size: 0; line-height: 10p=
+x"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align=3D"center">
+                                    <table
+                                      width=3D"100%"
+                                      border=3D"0"
+                                      cellspacing=3D"0"
+                                      cellpadding=3D"0"
+                                    >
+                                      <tbody>
+                                        <tr>
+                                          <td
+                                            align=3D"center"
+                                            style=3D"
+                                              color: #5b5a5a;
+                                              font-size: 24px;
+                                              line-height: 28px;
+                                              font-weight: 600;
+                                              font-family: Open Sans, Helve=
+tica, Tahoma, Arial,
+                                                sans-serif;
+                                              padding: 14px 14px 8px;
+                                              width: 42%;
+                                            "
+                                            class=3D"td-header"
+                                          >
+                                            Enjoy a comfortable retirement
+                                            <br />
+                                            with a lifelong income plan
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td style=3D"text-align: center">
+                                            <span
+                                              style=3D"
+                                                height: 1px;
+                                                width: 83%;
+                                                text-align: center;
+                                                background-color: #63cece;
+                                                display: inline-block;
+                                              "
+                                            ></span>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            style=3D"
+                                              color: #005e9e;
+                                              font-size: 13.5px;
+                                              line-height: 18px;
+                                              font-family: verdana, Arial,
+                                                sans-serif;
+                                              text-align: center;
+                                              padding: 0 18px 10px 18px;
+                                              font-weight: 500;
+                                            "
+                                          >
+                                            <table style=3D"width: 100%">
+                                              <tbody>
+                                                <tr>
+                                                  <td
+                                                    style=3D"
+                                                      color: #5b5a5a;
+                                                      font-size: 16px;
+                                                      line-height: 19px;
+                                                      font-family: verdana,=
+ Arial,
+                                                sans-serif;
+                                                      text-align: center;
+                                                      padding: 16px 0 0;
+                                                      font-weight: 500;
+                                                    "
+                                                    class=3D"mobile-td"
+                                                  >
+                                                    With
+                                                    <strong
+                                                      style=3D"
+                                                        color: #005e9e !imp=
+ortant;
+                                                      "
+                                                    >
+                                                      <span
+                                                        style=3D"color: #ed=
+1c24"
+                                                      >
+                                                        HDFC
+                                                      </span>
+                                                      Life
+                                                      <span
+                                                        style=3D"color: #ed=
+1c24"
+                                                      >
+                                                        Sanchay
+                                                      </span>
+                                                    Plus</strong>, secure y=
+our retirement.
+                                                    <br />
+                                                    Opt for the Life Long I=
+ncome
+                                                    Option for a sunny fina=
+ncial
+                                                    <br />
+                                                    future coupled with
+                                                    tax-saving benefits.
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td
+                                            height=3D"28"
+                                            style=3D"
+                                              font-size: 0;
+                                              line-height: 28px;
+                                            "
+                                          >
+                                            &nbsp;
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td width=3D"10">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table
+                      style=3D"
+                        width: 100%;
+                        border-left: 1px solid #cdcdcd;
+                        border-right: 1px solid #cdcdcd;
+                      "
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            style=3D"
+                              color: #5b5a5a;
+                              font-size: 22px;
+                              line-height: 27px;
+                              font-weight: 600;
+                              font-family: Open Sans, Helvetica, Tahoma, Ar=
+ial,
+                          sans-serif;
+                              text-align: center;
+                            "
+                          >
+                            Range of Benefits
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style=3D"height: 8px; line-height: 8px"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style=3D"
+                      font-family: Open Sans, Helvetica, Tahoma, Arial,
+                        sans-serif;
+                      font-size: 0px;
+                      padding: 10px 0 0 0;
+                      word-break: break-word;
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                    "
+                  >
+                    <div
+                      class=3D""
+                      style=3D"
+                        padding: 0;
+                        box-sizing: border-box;
+                        font-family: Open Sans, Helvetica, Tahoma, Arial,
+                          sans-serif;
+                        margin: 0px auto;
+                        max-width: 780px;
+                      "
+                    >
+                      <table style=3D"width: 100%">
+                        <tbody>
+                          <tr>
+                            <!-- <td
+                                style=3D"width: 39px"
+                              ></td> -->
+                            <td style=3D"width: 25px"></td>
+                            <td
+                              class=3D"padding-0"
+                              style=3D"
+                                font-family: Open Sans, Helvetica, Tahoma, =
+Arial,
+                                  sans-serif;
+                                direction: ltr;
+                                font-size: 14px;
+                                padding-top: 0px;
+                                text-align: center;
+                                padding-bottom: 16px;
+                                padding-right: 0;
+                              "
+                              width=3D"190"
+                            >
+                              <table style=3D"width: 100%">
+                                <tbody>
+                                  <tr>
+                                    <td style=3D"text-align: right">
+                                    <a href=3D"http://t4.online.hdfclife.co=
+m/r/=3Fid=3Dh8181a437,947b906,652988" target=3D"_blank"><img
+                                        src=3D"http://res4.online.hdfclife.=
+com/res/img/0F60681DCF301AAAB04001518E562D25.png"
+                                        class=3D"quora-ads-icon"
+                                        alt=3D"tax-benefits"
+                                        width=3D"60"
+                                      /></a>
+                                    </td>
+                                    <td style=3D"width: 10px"></td>
+                                    <td
+                                      style=3D"
+                                        margin-top: 0;
+                                        font-size: 16px;
+                                        margin: 0;
+                                        font-weight: 400;
+                                        color: #5b5a5a;
+                                        text-align: left;
+                                        padding-top: 8px;
+                                      "
+                                    >
+                                      Tax benefits<sup style=3D"font-size: =
+10px"
+                                        >1</sup
+                                      >
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+
+                              <p class=3D"food-title pr-7px"></p>
+                            </td>
+                            <td
+                              class=3D"padding-0"
+                              style=3D"
+                                font-family: Open Sans, Helvetica, Tahoma, =
+Arial,
+                                  sans-serif;
+                                direction: ltr;
+                                font-size: 14px;
+                                text-align: center;
+                                padding-bottom: 16px;
+                                padding-left: 0;
+                                width: 190px;
+                              "
+                            >
+                              <table style=3D"width: 100%">
+                                <tbody>
+                                  <tr>
+                                    <td style=3D"text-align: right">
+                                    <a href=3D"http://t4.online.hdfclife.co=
+m/r/=3Fid=3Dh8181a437,947b906,652989" target=3D"_blank"><img
+                                        src=3D"http://res4.online.hdfclife.=
+com/res/img/99FE1F09679A319A034937E33F5B86E3.png"
+                                        class=3D"quora-ads-icon"
+                                        alt=3D"lifelong-income"
+                                        width=3D"50"
+                                      /></a>
+                                    </td>
+                                    <td style=3D"width: 10px"></td>
+                                    <td
+                                      style=3D"
+                                        margin-top: 0;
+                                        font-size: 16px;
+                                        margin: 0;
+                                        font-weight: 400;
+                                        color: #5b5a5a;
+                                        text-align: left;
+                                        padding-top: 8px;
+                                      "
+                                    >
+                                      Guaranteed <br />lifelong income<sup
+                                        style=3D"font-size: 10px"
+                                        >2</sup
+                                      >
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                            <td style=3D"width: 25px"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    width=3D"490;border-left: 1px solid #cdcdcd;
+                  border-right: 1px solid #cdcdcd;"
+                  >
+                    <table
+                      width=3D"100%"
+                      border=3D"0"
+                      cellspacing=3D"0"
+                      cellpadding=3D"0"
+                      style=3D"
+                        border-left: 1px solid #cdcdcd;
+                        border-right: 1px solid #cdcdcd;
+                      "
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            height=3D"20"
+                            style=3D"font-size: 0; line-height: 20px"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td align=3D"center">
+                            <a href=3D"http://t4.online.hdfclife.com/r/=3Fi=
+d=3Dh8181a437,947b906,65298a" target=3D"_blank"><img
+                                src=3D"http://res4.online.hdfclife.com/res/=
+img/560EDF4341B507D7AC8970EAB1212239.png"
+                                alt=3D"end-communication"
+                                style=3D"
+                                  font-size: 0;
+                                  padding: 0;
+                                  margin: 0;
+                                  display: block;
+                                  border: 0;
+                                  outline: none;
+                                  width: 100%;
+                                "
+                            /></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align=3D"center"
+                    style=3D"
+                      font-size: 11px;
+                      color: #000000;
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                      background: #e6e7e8;
+                      display: block;
+                    "
+                  >
+                    <table
+                      width=3D"515"
+                      border=3D"0"
+                      cellspacing=3D"0"
+                      cellpadding=3D"0"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            height=3D"25"
+                            style=3D"font-size: 0; line-height: 25px"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <table
+                              width=3D"100%"
+                              border=3D"0"
+                              cellspacing=3D"0"
+                              cellpadding=3D"0"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td
+                                    style=3D"
+                                      font-family: 'Times New Roman';
+                                      text-align: left;
+                                      font-size: 10px;
+                                      line-height: 15px;
+                                      color: #000000;
+                                      font-weight: 400;
+                                    "
+                                  >
+                                    1. As per Income Tax, 1961. Tax benefit=
+s are
+                                    subject to changes in tax laws. <br />
+                                    2. An additional income is payable in c=
+ase
+                                    of higher premium amount, please refer =
+to
+                                    the Enhanced Benefit <br />for High Pre=
+mium
+                                    Policies <br />
+                                    <br />
+                                    <strong>
+                                      HDFC Life Insurance Company Limited (=
+=93HDFC
+                                      Life=94). </strong
+                                    >CIN: L65110MH2000PLC128245. IRDAI <br =
+/>
+                                    Registration No. 101.
+                                    <br />
+                                    <br />
+                                    <strong>Registered Office:</strong> 13t=
+h
+                                    Floor, Lodha Excelus, Apollo Mills Comp=
+ound,
+                                    N. M. Joshi Marg, Mahalaxmi,<br />
+                                    Mumbai - 400 011. Email:
+                                    <a
+                                      href=3D"mailto:service@hdfclife.com"
+                                      style=3D"color: #000; text-decoration=
+: none"
+                                      >service@hdfclife.com</a
+                                    >, Tel. No:
+                                    <a
+                                      href=3D"tel:18602679999"
+                                      style=3D"color: #000; text-decoration=
+: none"
+                                      >1860 267 9999</a
+                                    >
+                                    (Mon-Sat 10 am to 7 pm) <br />
+                                    Local charges apply. Do NOT prefix any
+                                    country code. e.g. +91 or 00. Website:
+                                    <a
+                                      href=3D"www.hdfclife.com"
+                                      style=3D"text-decoration: none; color=
+: #000"
+                                      >www.hdfclife.com</a
+                                    >
+                                    <br />
+                                    <br />
+                                    The name / letters 'HDFC' in the name/l=
+ogo
+                                    of HDFC Life Insurance Company Limited =
+(HDFC
+                                    Life) <br />
+                                    belongs to HDFC Bank Limited and is use=
+d by
+                                    HDFC Life under licence from HDFC Bank
+                                    Limited.
+                                    <br />
+                                    <br />
+                                    HDFC Life Sanchay Plus (UIN: 101N134V19=
+) is
+                                    a non-participating, non-linked savings
+                                    insurance plan. <br />
+                                    Life Insurance Coverage is available in=
+ this product.
+                                    <br>
+                                    <br />
+                                    For more details on risk factors, assoc=
+iated
+                                    terms and conditions and exclusions, pl=
+ease
+                                    read sales brochure <br />
+                                    carefully before concluding a sale. ARN=
+:
+                                    ED/12/23/6740
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td
+                                    height=3D"18"
+                                    style=3D"font-size: 0; line-height: 18p=
+x"
+                                  >
+                                    &nbsp;
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    align=3D"center"
+                    style=3D"
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                      background: #e6e7e8;
+                    "
+                  >
+                    <table
+                      width=3D"575"
+                      border=3D"0"
+                      cellspacing=3D"0"
+                      cellpadding=3D"0"
+                      style=3D"border: 1px solid #005e9e"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            height=3D"10"
+                            style=3D"font-size: 0; line-height: 10px"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style=3D"
+                              font-family: 'Times New Roman';
+                              text-align: left;
+                              font-size: 11px;
+                              color: #000000;
+                              font-weight: 700;
+                              text-align: center;
+                              padding-top: 3px;
+                              text-decoration: underline;
+                            "
+                          >
+                            <strong
+                              >BEWARE OF SPURIOUS PHONE CALLS AND
+                              FICTICIOUS/FRAUDULENT OFFERS
+                            </strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height=3D"8" style=3D"font-size: 0; line-heig=
+ht: 8px">
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            align=3D"center"
+                            style=3D"
+                              font-family: 'Times New Roman';
+                              font-size: 9px;
+                              color: #000000;
+                              padding-bottom: 5px;
+                              padding-top: 3px;
+                              padding-left: 8px;
+                            "
+                          >
+                            =95 IRDAI is not involved in activities like se=
+lling
+                            insurance policies, announcing bonus or investm=
+ent
+                            <br />
+                            of premiums. Public receiving such phone calls =
+are
+                            requested to lodge a police complaint.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            height=3D"10"
+                            style=3D"font-size: 0; line-height: 10px"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    valign=3D"top"
+                    height=3D"20"
+                    style=3D"
+                      line-height: 20px;
+                      font-size: 0;
+                      border-left: 1px solid #cdcdcd;
+                      border-right: 1px solid #cdcdcd;
+                      background: #e6e7e8;
+                      display: block;
+                    "
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    valign=3D"top"
+                    height=3D"13"
+                    align=3D"center"
+                    style=3D"display: block; background: #e4e5e6"
+                  >
+                  <a href=3D"http://t4.online.hdfclife.com/r/=3Fid=3Dh8181a=
+437,947b906,65298b" target=3D"_blank"><img
+                      src=3D"http://res4.online.hdfclife.com/res/img/5202E8=
+B73D63C68BE155DF9BEA944F56.png"
+                      alt=3D"bottom strip"
+                      width=3D"602"
+                      height=3D"13"
+                      style=3D"display: block; margin: 0; padding: 0"
+                    /></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr>
+        <td align=3D"center" style=3D"font-family:Verdana, Geneva, sans-ser=
+if;  color:#231f20; font-size:0.9em;  "><font style=3D"font-family: Verdana=
+, Arial; font-size: 10px"><p>
+You are receiving this message because you have been in contact with HDFC L=
+ife or an affiliate. To no longer receive messages from HDFC Life
+<a href=3D"http://t4.online.hdfclife.com/r/=3Fid=3Dh8181a437,947b906,65298c=
+&e=3DcDE9JTQwRiUyQkVyY3NBN3BGSWRTWVRFa1g3dGd3JTNEJTNE&s=3DfnRk9cfrBoW0fsMvK=
+LYQy-hgiO88swSkvttPpGLVoZQ" _label=3D"Opt-out link" _type=3D"optout">click =
+here</a>.
+</p> 
+</font></td>
+      </tr>
+      </tbody>
+    </table>
+  <img height=3D'0' width=3D'0' alt=3D'' src=3D'http://t4.online.hdfclife.c=
+om/r/=3Fid=3Dh8181a437,947b906,1'/></body>
+</html>
+
+------=_NextPart_872_D9655173.D9655173--
+
