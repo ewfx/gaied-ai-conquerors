@@ -1,0 +1,83 @@
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\rbabu\view\email triage\gaied-ai-conquerors\code\src\emailtriage.py
+Analyzing Fiji or Tokyo, get insured before you go!.eml...
+Error analyzing file emails_with-attachments-data\Fiji or Tokyo, get insured before you go!.eml: 
+
+You tried to access openai.ChatCompletion, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+
+C:\Users\rbabu\view\email triage\gaied-ai-conquerors>python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\rbabu\appdata\local\programs\python\python313\lib\site-packages (24.3.1)
+Collecting pip
+  Downloading pip-25.0.1-py3-none-any.whl.metadata (3.7 kB)
+Downloading pip-25.0.1-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 2.7 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.3.1
+    Uninstalling pip-24.3.1:
+      Successfully uninstalled pip-24.3.1
+Successfully installed pip-25.0.1
+
+C:\Users\rbabu\view\email triage\gaied-ai-conquerors>
+
+
+
+
+C:\Users\rbabu\view\email triage\gaied-ai-conquerors>python .\code\src\emailtriage.py
+Traceback (most recent call last):
+  File "C:\Users\rbabu\view\email triage\gaied-ai-conquerors\code\src\emailtriage.py", line 70, in <module>
+    process_attachments(attachments_folder, config)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rbabu\view\email triage\gaied-ai-conquerors\code\src\emailtriage.py", line 54, in process_attachments
+    for file_name in os.listdir(folder_path):
+                     ~~~~~~~~~~^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'emails_with-attachments-data'
+
+C:\Users\rbabu\view\email triage\gaied-ai-conquerors>
+
+
+
+
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\rbabu\view\email triage\gaied-ai-conquerors\code\src\emailtriage.py
+attachments_folder-->emails-with-attachments-data
+Analyzing Fiji or Tokyo, get insured before you go!.eml...
+Error analyzing file emails-with-attachments-data\Fiji or Tokyo, get insured before you go!.eml: Incorrect API key provided: your-ope*******-key. You can find your API key at https://platform.openai.com/account/api-keys.
+
+
+
+
+
+
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+= RESTART: C:\Users\rbabu\view\email triage\gaied-ai-conquerors\code\src\emailtriage.py
+attachments_folder-->emails-with-attachments-data
+Analyzing Fiji or Tokyo, get insured before you go!.eml...
+Error analyzing file emails-with-attachments-data\Fiji or Tokyo, get insured before you go!.eml: The model `gpt-4` does not exist or you do not have access to it.
+Analyzing Last Chance! Register for Alibaba.com Export Summit 2025 Now.eml...
+
+
+
+
+Analyzing Special Offer for Your Dream Bike! 🏍️ 🤑.eml...
+Error analyzing file emails-with-attachments-data\Special Offer for Your Dream Bike! 🏍️ 🤑.eml: Rate limit reached for gpt-4o-mini in organization org-kzK7mf0tL5qgR4DknQ197AYN on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.
+Analyzing Sunday Special_ Get Your Instant Loan Without Extra Charges!.eml...
+Error analyzing file emails-with-attachments-data\Sunday Special_ Get Your Instant Loan Without Extra Charges!.eml: Rate limit reached for gpt-4o-mini in organization org-kzK7mf0tL5qgR4DknQ197AYN on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.
+Analyzing What if you could spend as you please_.eml...
+Error analyzing file emails-with-attachments-data\What if you could spend as you please_.eml: Rate limit reached for gpt-4o-mini in organization org-kzK7mf0tL5qgR4DknQ197AYN on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.
+Analyzing You can now transfer up to USD 50,000 overseas.eml...
+Error analyzing file emails-with-attachments-data\You can now transfer up to USD 50,000 overseas.eml: Rate limit reached for gpt-4o-mini in organization org-kzK7mf0tL5qgR4DknQ197AYN on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.
