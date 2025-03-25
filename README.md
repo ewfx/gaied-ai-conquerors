@@ -14,13 +14,13 @@
 ---
 
 ## 🎯 Introduction
-This Email and document triage chanllenge. This solution is to automate email classification & data extraction using Gen AI models/ LLMs, to improve effeiciency, accuracy & turn around time. While acheving that it also minimize the gate keeping activities. 
-   The emails contains diverse requests, oftne with attachments which will be processed to do
-   1) Interpret the emails content and attachements.
+This is an Email and document triage challenge. This solution is to automate email classification & data extraction using Gen AI models/ LLMs, to improve efficiency, accuracy & turn around time. While achieving that it also minimize the gate keeping activities. 
+   The emails contains diverse requests, often with attachments which will be processed to do
+   1) Interpret the emails content and attachments.
    2) Identify the intent of the email.
    3) Classify request type and sub request type.
-   4) Extract key attributes based on properties injected for population in the service reqeusts.
-   5) Assign the requests to the appropriate team or individuals based on the roles, responsibities and skills.
+   4) Extract key attributes based on properties injected for population in the service requests.
+   5) Assign the requests to the appropriate team or individuals based on the roles, responsibilities and skills.
       
 
 ## 🎥 Demo
@@ -35,22 +35,21 @@ TBD
 
 ## ⚙️ What It Does
 
-This Email and document triage chanllenge. This solution is to automate email classification & data extraction using Gen AI models/ LLMs, to improve effeiciency, accuracy & turn around time. While acheving that it also minimize the gate keeping activities. 
-   The emails contains diverse requests, oftne with attachments which will be processed to do
-   1) Interpret the emails content and attachements.
+This "Email and document triage challenge" solution is to automate email manual classification & data extraction using Gen AI (LLMs) models, to improve efficiency, accuracy & turn around time. While achieving that it also take care of the gate keeping activities. The emails contains diverse requests, often with attachments which will be processed to do
+   1) Interpret the emails content and attachments.
    2) Identify the intent of the email.
    3) Classify request type and sub request type.
-   4) Extract key attributes based on properties injected for population in the service reqeusts.
-   5) Assign the requests to the appropriate team or individuals based on the roles, responsibities and skills.
+   4) Extract key attributes based on properties injected for population in the service requests.
+   5) Assign the requests to the appropriate team or individuals based on the roles, responsibilities and skills.
 
 ## 🛠️ How We Built It
 We have used python, openai.
-openai is used for analyze the given emails/ attachements content according to the configured rules, keys, and priorities.
+openai is used for analyze the given emails/ attachments content according to the configured rules, keys, and priorities.
 
 ## 🚧 Challenges We Faced
 We faced few challenges
 1) OpenAI Python library has changed its interface starting from version 1.0.0. Your code uses the older openai.Completion method, which is no longer supported.
-2) Error parsing the sample emails aviable.
+2) Error parsing the sample emails available.
 3) 
 
 ## 🏃 How to Run

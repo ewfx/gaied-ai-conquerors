@@ -3,7 +3,7 @@ import configparser
 import openai
 
 # Set up your OpenAI API key
-openai.api_key = "your-openai-api-key"
+openai.api_key = "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"
 
 def load_properties(file_path):
     """Loads keys, rules, and priorities from a .properties file."""
@@ -38,7 +38,7 @@ def analyze_attachment(file_path, config):
 
         # Using the new OpenAI Chat API
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # Replace with desired model
+            model="gpt-4o-mini",  # Replace with desired model
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
@@ -61,12 +61,13 @@ def process_attachments(folder_path, config):
 if __name__ == "__main__":
     # Path to your properties file and attachments folder
     properties_file = "emailtriage-config.properties"  # Path to your .properties file
-    attachments_folder = "emails_with-attachments-data"  # Folder with email attachments
+    attachments_folder = "emails-with-attachments-data"  # Folder with email attachments
 
     # Load properties
     config = load_properties(properties_file)
     if config is not None:
         # Process email attachments
+        print("attachments_folder-->"+attachments_folder)
         process_attachments(attachments_folder, config)
     else:
         print("Could not load properties. Exiting.")
