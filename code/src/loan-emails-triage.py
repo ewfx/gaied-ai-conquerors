@@ -11,9 +11,8 @@ from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
 
 # Paths
-EMAILS_FOLDER = "banking-loan-emails-attachments-data/"
+EMAILS_FOLDER = "emails/"
 CONFIG_FILE = "config/banking_config.json"
-openai.api_key = "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"
 
 # Load configuration
 with open(CONFIG_FILE, "r") as f:
