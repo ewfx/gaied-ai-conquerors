@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: email-triage-attachments-deployment
+  labels:
+    app: email-triage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: email-triage
+  template:
+    metadata:
+      labels:
+        app: email-triage
+    spec:
+      containers:
+      - name: email-triage
+        image: email-triage:latest
+        ports:
+        - containerPort: 8080
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/config
+      volumes:
+      - name: config-volume
+        configMap:
+          name: banking-email-triage-attachments-config
+livenessProbe:
+  httpGet:
+    path: /health
+    port: 8080
+  initialDelaySeconds: 3
+  periodSeconds: 10
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 8080
+  initialDelaySeconds: 3
+  periodSeconds: 5

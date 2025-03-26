@@ -60,7 +60,7 @@ def process_attachments(folder_path, config):
 
 if __name__ == "__main__":
     # Path to your properties file and attachments folder
-    properties_file = "banking-emailtriage-config.properties"  # Path to your .properties file
+    properties_file = "banking-email-triage-config.properties"  # Path to your .properties file
     attachments_folder = "banking-emails-attachments-data"  # Folder with email attachments
 
     # Load properties

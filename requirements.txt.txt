@@ -1,0 +1,10 @@
+# Email processing and utilities
+email==6.0.0       # For working with email messages
+email-parser==0.6.8
+
+# Logging and debugging
+loguru==0.6.0
+
+# Testing dependencies
+pytest==7.2.2      # For testing purposes
+karate==1.4.0      # If using Karate framework for testing
