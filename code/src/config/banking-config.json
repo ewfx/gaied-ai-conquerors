@@ -1,0 +1,34 @@
+{
+    "request_types": [
+        "Adjustment",
+        "AU Transfer",
+        "Closing Notice",
+        "Commitment Change",
+        "Fee Payment",
+        "Money Movement Inbound",
+        "Money Movement Outbound"
+    ],
+    "sub_request_types": {
+        "Closing Notice": ["Reallocation Fees", "Amendment Fees"],
+        "Commitment Change": ["Cashless Roll", "Decrease", "Increase"],
+        "Fee Payment": ["Ongoing Fee", "Letter of Credit Fee"],
+        "Money Movement Inbound": ["Principal", "Interest", "Principal+Interest", "Principal+Interest+Fee"],
+        "Money Movement Outbound": ["Timebound", "Foreign Currency"]
+    },
+    "priorities": {
+        "Adjustment": 1,
+        "AU Transfer": 2,
+        "Closing Notice": 3,
+        "Commitment Change": 4,
+        "Fee Payment": 5,
+        "Money Movement Inbound": 6,
+        "Money Movement Outbound": 7
+    },
+    "keywords": {
+        "Closing Notice": ["reallocation", "amendment"],
+        "Commitment Change": ["cashless", "decrease", "increase"],
+        "Fee Payment": ["ongoing fee", "letter of credit"],
+        "Money Movement Inbound": ["principal", "interest"],
+        "Money Movement Outbound": ["timebound", "foreign currency"]
+    }
+}

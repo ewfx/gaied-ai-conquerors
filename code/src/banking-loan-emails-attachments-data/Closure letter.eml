@@ -1,0 +1,328 @@
+Delivered-To: rbchalisem@gmail.com
+Received: by 2002:a05:7208:c10:b0:9b:b4c0:dd5a with SMTP id ix16csp3094583rbb;
+        Tue, 25 Mar 2025 20:59:56 -0700 (PDT)
+X-Received: by 2002:a05:6102:440e:b0:4c2:fa6a:7e2d with SMTP id ada2fe7eead31-4c50d482701mr15378830137.1.1742961595850;
+        Tue, 25 Mar 2025 20:59:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742961595; cv=none;
+        d=google.com; s=arc-20240605;
+        b=eYUkrjF/xCHFJ6n46OHevBmNSc6AHTH3kyLGYdLY8wEnuTDxJfUqJldcLF23GPipgu
+         dmGjqCZVAeF/lBjEOf1+QnpnQgY0MjzMLvfJPOgNx/0I+TuLV5iTGR2gr/1aGbjX0ji/
+         qzvqHtakdhQKI0cZWlfCWYs9W7JPHUU9Vs8tpWjEi4EIVCLU/UQnuJgfniRE/vqC19NR
+         7pvmrrkdISkM7xZjgwZkzeVHq1yafVe0uye3CA1Pbq+1UqLi0+YYGT5efY4u1ZJ4fnBc
+         dot+CoRtKSBsT5FiGkT94T7xrr0jceqv2+LJWQqrdhC8L78rvjeDG25sGAsptei17oLt
+         GkgA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=2Bzt6yIk0CIqSDFr61BWYFyxJm1t3S074JxHm8cazp4=;
+        fh=AznGsUWRHRfSVEXidsiEI/V0l76VXv0dFknZbOTNX3U=;
+        b=D9/VWGDzK3i2+3hYP2cjOw3l+nC52MIrXaeyOAJ9RYbuJCF0y9NAZhH4I+v9YVyjIa
+         b1qMPliGwogPzQJNG65ibapCHtaYs8UMK5TiB6vlxGBrLnOFwBDzbXDYMQg0BSYg/Ps9
+         JEMSmGQWooU7CZ6BcGRz2zSNhdyab1o85vmqcbR6UBj/5cuNEdkxWVogPOXL5wvNEuqA
+         I+wBn3KTZNWTuSehypQ8xVh+WYIpLQX3SB42Sb3/5pnqd+qMy3mA7py6l77TruVRDlFN
+         SyOIsveUwWMhaH4AoeNRm4ISTRYCE0YgNp+NTTdK3sOe1latXMTBttTzDwui1I7UnQAR
+         FEVw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lmETaeQE;
+       spf=pass (google.com: domain of geethakusumca@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=geethakusumca@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <geethakusumca@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id ada2fe7eead31-4c50bea08dbsor1223786137.9.2025.03.25.20.59.55
+        for <rbchalisem@gmail.com>
+        (Google Transport Security);
+        Tue, 25 Mar 2025 20:59:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of geethakusumca@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=lmETaeQE;
+       spf=pass (google.com: domain of geethakusumca@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=geethakusumca@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742961595; x=1743566395; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=2Bzt6yIk0CIqSDFr61BWYFyxJm1t3S074JxHm8cazp4=;
+        b=lmETaeQE0AtlNdgDpaDZhFRZWouTx7gC0mzdRxd0MSy3sN6nKptyS28E+Alao2pkv/
+         RxdlmI5ah07t3Pfe9p5FdANth4LNVjK1xwcSgKn4N6zbAAHzV8Ei79J0BgpleaZXgkU/
+         EP1rWdpcAsWxFIAZ9gHJXJd035sBQXOc98IdRghgptr7+sSX6nyym62wC33OjPH6XYof
+         ud0U+xvxd/k0VChb21J7Ydac3+9wFJB5ACDpJd2Hl/1wgnXle7GIfKlz6GAWyr0ufwdu
+         SOqbN9Vomou+cgqK8jFl1gbJhRwO9m9X3wIgtcMpG84iB4++QL5OuIlIfja6C6wa46MV
+         xWng==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742961595; x=1743566395;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=2Bzt6yIk0CIqSDFr61BWYFyxJm1t3S074JxHm8cazp4=;
+        b=K+Ypyjo8RW/yEi9ny5+Fg7kpkemwsxUmRVYuU9FNYCEG55imrtsWKpfndKidInpQKE
+         IvtkxYVOI9XAEmJkd4tB2K4QFCcQZIxFT08UNE3m0xfJUYHtELXlfYedfWPAbFOFkqkv
+         COH/rfMuPKNkjrjDHSTJR27FSxmlrNvimiSDjpz5F1r/YVAF8jiwHemNW1U5A/D9vDsr
+         X4yFwGAE060rBRu8zOAcyZ9sHP0jRmiB2VBUwtc4xQ03VC3Xk3t43iih+oVBjnKc1wvN
+         cR/4YkR+lhb3I+d+YJrIXmiG5+iM855zAuvpNboeLiy16NRQcV4NyUz8usxtemyirG+K
+         cjAg==
+X-Gm-Message-State: AOJu0Yyls8S3cgTDaHYdeeYphBHFXWdnPF4SKhruvpevTbRYxNHwOKJG
+	+0KJ+ZSCiwRiwJNEvw6r0/26a/RLiKMVf51AA1BxfPaOnlWMGP0g8vvxlYsE+U1gw2Fk/AVTejY
+	g6zMuzOHgHqTWifr5ir3M+7PYZRzPKQ==
+X-Gm-Gg: ASbGncvmjd5yBVbMesERsbx0y0UCMB9dmIO2BMwN4I2synfgJyeRvcBh3xVAcZIH4m6
+	Qq+YWONryVH14q4j2+gGs25p5FUHcIsOfEHugIrmNzW8mWYfDbYj6fbX3K4PVUmCQVfs8GbjVGM
+	EUkYrUMB2UFl6Hpr2MGRid9rBQ78TMIYvyKowtGA==
+X-Google-Smtp-Source: AGHT+IE7MwZXmX/PoFh9ITkDpqu1qyioKJv/udixMPWUJoCAPm4zxhXmvSCCiaNYvVEr+mEig3LMP8NhzLIHPIBNfro=
+X-Received: by 2002:a05:6102:b04:b0:4bb:dfd8:4181 with SMTP id
+ ada2fe7eead31-4c50d47fcfbmr14210905137.4.1742961595056; Tue, 25 Mar 2025
+ 20:59:55 -0700 (PDT)
+MIME-Version: 1.0
+References: <2.0.1C.C19.1DB8BE2F77BC1C0.0@40-228-hb-dc-v6.hbmail.powerelay.com>
+In-Reply-To: <2.0.1C.C19.1DB8BE2F77BC1C0.0@40-228-hb-dc-v6.hbmail.powerelay.com>
+From: kusuma geetha <geethakusumca@gmail.com>
+Date: Wed, 26 Mar 2025 09:29:35 +0530
+X-Gm-Features: AQ5f1JoAvdv5I6Kr1xYrvRt_PKyXDfIc4EuRe2HUsRsCEfLdf1hOHmcog7vOtLw
+Message-ID: <CAP5Ak8EvMKZVYXOdNqnQUCucSoemQK5o+HxCPUn2csZU2p4xdA@mail.gmail.com>
+Subject: Fwd: Closure letter
+To: Ramesh Babu Chalisem <rbchalisem@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000bb0db0063136de77"
+
+--000000000000bb0db0063136de77
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: <Emailintimation@hdfcbank.com>
+Date: Mon, Mar 3, 2025 at 7:55=E2=80=AFAM
+Subject: Closure letter
+To: <GEETHAKUSUMCA@gmail.com>
+
+
+
+
+*Closure of Your Loan Account No. 125734619*
+Dear *Customer*,
+
+We are so happy to have had the opportunity of helping you with your loan.
+Thank-you for trusting us and we hope that this experience was everything
+what it should be!
+
+Your *loan* has been closed as of *27-Feb-25*.
+
+However, there may still be some necessary action which needs your
+attention:
+
+*Uncashed Post Dated/ Security Cheques*
+
+   1. We will keep your post-dated/security cheques, marked as "cancelled",
+   at our office. We will destroy them after 45 days from the date of the l=
+oan
+   account's closure. If you want us to send them back to you, please conta=
+ct
+   us through Phone Banking or visit
+   <https://www.hdfcbank.com/personal/need-help/contact-us> and make a
+   request.
+
+   You can also visit any of our Retail Loan Service Centers (refer to
+   www.hdfcbank.com >> Find your nearest >> Retail Loan Service Center for
+   addresses/ contact details) and make a request for the return of cancell=
+ed
+   cheques there. We will not be able to process any requests for unbanked
+   cheques after 45 days from the date of closure. The list of Post Dated/
+   Security Cheques that remained uncashed as of the date of closure is
+   enclosed herewith for your reference.
+   2. If your loan has been closed through the pre-payment process, the
+   next payment will likely happen on the original date. If the payment
+   happens when it is presented, you will get the money back in 10 working
+   days. The money will be sent back to you either through a direct credit =
+to
+   your bank account or through a Pay-Order sent to your mailing address. W=
+e
+   have already told you this in our offer for foreclosure. Please mark a
+   "Stop Payment."
+   3. If you have post-dated/security cheques for multiple EMIs, they will
+   be presented until the repayment instructions are changed to reflect you=
+r
+   live account information. If you need assistance, please visit one of ou=
+r
+   Retail Loans Service Centers. If you need any help with your loan, pleas=
+e
+   write to loansupport@hdfcbank.com
+
+We will be happy to help you get a different loan or answer any questions
+you have.
+
+You can also call our Phone Banking Helpline or go to our website
+<https://www.hdfcbank.com/personal/need-help/contact-us> and request more
+information from one of our authorised representatives.
+
+Warm Regards,
+*HDFC Bank Ltd.*
+
+*For India's No.1 Bank disclaimer, click here
+<https://www.hdfcbank.com/personal/useful-links/terms-and-conditions/discla=
+imer-service-mailers1>
+Titash_10-07-23
+
+--000000000000bb0db0063136de77
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote gmail_quote_container"><=
+div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------=
+<br>From: <span dir=3D"auto">&lt;<a href=3D"mailto:Emailintimation@hdfcbank=
+.com">Emailintimation@hdfcbank.com</a>&gt;</span><br>Date: Mon, Mar 3, 2025=
+ at 7:55=E2=80=AFAM<br>Subject: Closure letter<br>To:  &lt;<a href=3D"mailt=
+o:GEETHAKUSUMCA@gmail.com">GEETHAKUSUMCA@gmail.com</a>&gt;<br></div><br><br=
+><u></u>
+
+
+
+
+
+
+
+
+
+
+
+<div>
+  <table align=3D"center" width=3D"602" border=3D"0" cellspacing=3D"0" cell=
+padding=3D"0">
+    <tbody><tr>
+    <td valign=3D"top" bgcolor=3D"#dcddde" style=3D"line-height:0px;backgro=
+und-color:#dcddde;border-left:1px solid #dcddde"><div>=20
+        =20
+        <img src=3D"https://v1.hdfcbank.com/htdocs/common/2020/feb/CSA-Sala=
+ry-Day/NM/images/header.jpg" alt=3D"" width=3D"100%" border=3D"0">
+        =20
+      </div></td>
+  </tr>
+       =20
+          <tr>
+            <td valign=3D"middle"><table width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" style=3D"border-left:1px solid #ccc;border-ri=
+ght:1px solid #ccc;border-bottom:1px solid #ccc">
+                <tbody><tr>
+                  <td valign=3D"middle"><table width=3D"100%" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" style=3D"width:100%!important">
+                      <tbody><tr>
+                        <td width=3D"5%"></td>
+                        <td width=3D"90%" valign=3D"middle"><table width=3D=
+"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"width:100%=
+!important">
+                              <tbody><tr>
+                              <td height=3D"20"></td>
+                            </tr>        =20
+         =20
+						     <tr>
+                              <td style=3D"font-family:Arial,Helvetica,sans=
+-serif;font-size:16px;color:#000;line-height:22px;letter-spacing:1px"><cent=
+er><b><u>Closure of Your Loan Account No. 125734619<br><br></u></b></center=
+></td>
+                            </tr>
+ =20
+       <tr>
+    <td style=3D"font-family:Arial,Helvetica,sans-serif;font-size:16px;colo=
+r:#000;line-height:22px;letter-spacing:1px">Dear <b>Customer</b>,<br><br>
+        We are so happy to have had the opportunity of helping you with you=
+r loan.=20
+Thank-you for trusting us and we hope that this experience was everything w=
+hat it should be!<br><br>
+
+        Your <b>loan</b> has been closed as of <b>27-Feb-25</b>.<br><br>
+
+        However, there may still be some necessary action which needs your =
+attention:<br><br>
+
+        <u><b>Uncashed Post Dated/ Security Cheques</b></u>=20
+
+        <ol>
+            <li>We will keep your post-dated/security cheques, marked as &q=
+uot;cancelled&quot;, at our office. We will destroy them after 45 days from=
+ the date of the loan account&#39;s closure. If you want us to send them ba=
+ck to you, please contact us through Phone Banking or <a href=3D"https://ww=
+w.hdfcbank.com/personal/need-help/contact-us" target=3D"_blank">visit</a> a=
+nd make a request.<br><br> You can also visit any of our Retail Loan Servic=
+e Centers (refer to <a href=3D"http://www.hdfcbank.com" target=3D"_blank">w=
+ww.hdfcbank.com</a> &gt;&gt; Find your nearest &gt;&gt; Retail Loan Service=
+ Center for addresses/ contact details) and make a request for the return o=
+f cancelled cheques there. We will not be able to process any requests for =
+unbanked cheques after 45 days from the date of closure. The list of Post D=
+ated/ Security Cheques that remained uncashed as of the date of closure is =
+enclosed herewith for your reference.</li><br> =20
+            <li>If your loan has been closed through the pre-payment proces=
+s, the next payment will likely happen on the original date. If the payment=
+ happens when it is presented, you will get the money back in 10 working da=
+ys. The money will be sent back to you either through a direct credit to yo=
+ur bank account or through a Pay-Order sent to your mailing address. We hav=
+e already told you this in our offer for foreclosure. Please mark a &quot;S=
+top Payment.&quot;</li><br>
+            <li>If you have post-dated/security cheques for multiple EMIs, =
+they will be presented until the repayment instructions are changed to refl=
+ect your live account information. If you need assistance, please visit one=
+ of our Retail Loans Service Centers. If you need any help with your loan, =
+please write to <a href=3D"http://loansupport@hdfcbank.com" target=3D"_blan=
+k">loansupport@hdfcbank.com</a></li>
+        </ol>
+
+        We will be happy to help you get a different loan or answer any que=
+stions you have.<br><br>
+        You can also call our Phone Banking Helpline or go to our <a href=
+=3D"https://www.hdfcbank.com/personal/need-help/contact-us" target=3D"_blan=
+k"> website</a> and request more information from one of our authorised rep=
+resentatives.<br><br>
+    </td>
+</tr>
+<tr>
+                <td height=3D"20">
+                </td>
+              </tr>
+              <tr>
+               =20
+                              <td align=3D"left" valign=3D"middle" style=3D=
+"font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#000;line-heig=
+ht:28px;letter-spacing:1px">Warm Regards,<br>
+                             <strong>HDFC Bank Ltd.</strong><br><br>
+                           </td>
+
+ </tr><tr><td align=3D"left" valign=3D"middle" style=3D"font-family:Arial,H=
+elvetica,sans-serif;font-size:10px;color:#000;line-height:28px;letter-spaci=
+ng:1px"></td>
+
+</tr>
+
+=20
+             =20
+                =20
+                          </tbody></table></td>
+                        <td width=3D"5%"></td>
+                      </tr>
+                    </tbody></table></td>
+                </tr>
+              </tbody></table></td>
+          </tr>
+<tr>
+               <td align=3D"left" style=3D"padding:5px 25px;font-family:Ari=
+al,Helvetica,sans-serif;font-size:11px;line-height:14px;color:#000">*For In=
+dia&#39;s No.1 Bank disclaimer, <a href=3D"https://www.hdfcbank.com/persona=
+l/useful-links/terms-and-conditions/disclaimer-service-mailers1" style=3D"t=
+ext-decoration:underline;color:#0000ff" target=3D"_blank">click here</a>
+ </td>
+  </tr>
+            =20
+          <tr>
+    <td align=3D"left" style=3D"padding:5px 25px 0px;font-family:Arial,Helv=
+etica,sans-serif;font-size:11px;line-height:14px;color:#fff">Titash_10-07-2=
+3</td>
+  </tr>
+         =20
+      =20
+        </tbody></table>
+   =20
+ =20
+ =20
+
+</div>
+
+
+
+</div></div>
+
+--000000000000bb0db0063136de77--

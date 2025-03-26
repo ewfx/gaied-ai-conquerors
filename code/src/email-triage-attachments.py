@@ -100,3 +100,49 @@ if __name__ == "__main__":
         process_emails(emails_with_attachments_folder, config)
     else:
         print("Could not load properties. Exiting.")
+
+
+def classify_sub_request(request_type, email_text):
+    if request_type == "Closing Notice":
+        if "reallocation fee" in email_text.lower():
+            return "Reallocation Fee"
+        elif "amendment fee" in email_text.lower():
+            return "Amendment Fee"
+    elif request_type == "Money Movement Inbound":
+        if "principal" in email_text.lower():
+            return "Principal"
+        elif "interest" in email_text.lower():
+            return "Interest"
+    # Add more rules/subtypes as needed
+    return "Unknown"
+
+emails_df['sub_request_type'] = emails_df.apply(
+    lambda row: classify_sub_request(row['request_type'], row['body']), axis=1
+)
+
+
+
+from transformers import pipeline
+
+# Load a pre-trained Hugging Face model for classification
+classifier = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
+
+def classify_request(email_text):
+    result = classifier(email_text)
+    return result[0]['label']
+
+emails_df['request_type'] = emails_df['body'].apply(classify_request)
+
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+# Compute TF-IDF matrix
+tfidf = TfidfVectorizer(stop_words='english')
+tfidf_matrix = tfidf.fit_transform(emails_df['body'])
+
+# Calculate cosine similarity
+cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+
+# Flag duplicates based on similarity threshold
+emails_df['is_duplicate'] = [any(row > 0.8) for row in cosine_sim]
