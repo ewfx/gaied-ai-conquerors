@@ -13,6 +13,8 @@ from langchain.llms import OpenAI
 # Paths
 EMAILS_FOLDER = "emails/"
 CONFIG_FILE = "config/banking_config.json"
+OPENAI_API_KEY = "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";
+
 
 # Load configuration
 with open(CONFIG_FILE, "r") as f:
